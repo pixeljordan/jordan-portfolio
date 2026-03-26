@@ -20,25 +20,25 @@ const notIdeal = [
   "Design as order-taking"
 ];
 ---
-<section id="fit" class="py-24 px-6 md:px-12 bg-gradient-to-b from-[var(--color-bg-warm)] to-[var(--color-bg)]">
+<section id="fit" class="py-24 px-6 md:px-10 bg-gradient-to-b from-[var(--color-bg-warm)] to-[var(--color-bg)]">
   <div class="max-w-6xl mx-auto text-center">
-    <h2 class="font-[var(--font-display)] text-[clamp(2rem,4vw,3rem)] font-normal mb-3 heading-wipe">Is This a Good Fit?</h2>
+    <h2 class="font-[var(--font-display)] text-[clamp(2.2rem,5vw,3.2rem)] font-normal mb-4 heading-wipe">Is This a Good Fit?</h2>
     <p class="text-lg text-[var(--color-text-secondary)] mb-14 reveal">
       Transparent about where I excel and where I might not be the best match.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left reveal">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-left reveal">
       <!-- Great Fit -->
       <div class="stagger-item bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 card-hover">
-        <div class="flex items-center gap-2 mb-6">
-          <span class="text-[var(--color-strong)] text-lg">✓</span>
-          <h3 class="text-lg font-semibold">Great Fit</h3>
-          <span class="text-[var(--color-strong)]">✓</span>
+        <div class="flex items-center gap-2.5 mb-6">
+          <span class="text-green-500 text-xl">✓</span>
+          <h3 class="text-lg font-bold">Great Fit</h3>
+          <span class="text-green-500">✓</span>
         </div>
-        <ul class="space-y-3">
+        <ul class="space-y-3.5">
           {great.map(item => (
-            <li class="flex gap-2.5 text-[0.95rem] text-[var(--color-text-secondary)]">
-              <span class="text-[var(--color-strong)] mt-0.5">•</span>
+            <li class="flex gap-3 text-[0.95rem] text-[var(--color-text)]">
+              <span class="text-green-500 mt-0.5 text-sm">●</span>
               {item}
             </li>
           ))}
@@ -47,15 +47,15 @@ const notIdeal = [
 
       <!-- Can Adapt -->
       <div class="stagger-item bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 card-hover">
-        <div class="flex items-center gap-2 mb-6">
-          <span class="text-[var(--color-moderate)] text-lg">○</span>
-          <h3 class="text-lg font-semibold">Can Adapt</h3>
-          <span class="text-[var(--color-moderate)]">~</span>
+        <div class="flex items-center gap-2.5 mb-6">
+          <span class="text-amber-400 text-xl">○</span>
+          <h3 class="text-lg font-bold">Can Adapt</h3>
+          <span class="text-amber-400">~</span>
         </div>
-        <ul class="space-y-3">
+        <ul class="space-y-3.5">
           {adapt.map(item => (
-            <li class="flex gap-2.5 text-[0.95rem] text-[var(--color-text-secondary)]">
-              <span class="text-[var(--color-moderate)] mt-0.5">•</span>
+            <li class="flex gap-3 text-[0.95rem] text-[var(--color-text-secondary)]">
+              <span class="text-amber-400 mt-0.5 text-sm">●</span>
               {item}
             </li>
           ))}
@@ -64,15 +64,15 @@ const notIdeal = [
 
       <!-- Not Ideal -->
       <div class="stagger-item bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 card-hover">
-        <div class="flex items-center gap-2 mb-6">
-          <span class="text-[var(--color-gaps)] text-lg">✗</span>
-          <h3 class="text-lg font-semibold text-[var(--color-text-muted)]">Not Ideal</h3>
-          <span class="text-[var(--color-gaps)]">✗</span>
+        <div class="flex items-center gap-2.5 mb-6">
+          <span class="text-red-400 text-xl">✗</span>
+          <h3 class="text-lg font-bold text-[var(--color-text-muted)]">Not Ideal</h3>
+          <span class="text-red-400">✗</span>
         </div>
-        <ul class="space-y-3">
+        <ul class="space-y-3.5">
           {notIdeal.map(item => (
-            <li class="flex gap-2.5 text-[0.95rem] text-[var(--color-text-muted)]">
-              <span class="text-[var(--color-gaps)] mt-0.5">•</span>
+            <li class="flex gap-3 text-[0.95rem] text-[var(--color-text-muted)]">
+              <span class="text-red-400 mt-0.5 text-sm">●</span>
               {item}
             </li>
           ))}
