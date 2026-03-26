@@ -1,0 +1,44 @@
+---
+const cards = [
+  {
+    icon: "🤖",
+    title: "Agent-First Design",
+    description: "In 2026, AI agents are your first users. I design interfaces legible to machines AND humans: semantic structure, API-first architecture, graceful human-agent handoffs."
+  },
+  {
+    icon: "⚡",
+    title: "Solutions-First Process",
+    description: "Build fast, learn fast. 48-hour prototype windows and 2-week design cycles. Ship solutions, then refine based on real user behavior."
+  },
+  {
+    icon: "🤝",
+    title: "Product Trio+ Framework",
+    description: "Design, Engineering, and Product working in continuous discovery, not sequential handoffs. Collaborative problem-solving from day one."
+  },
+  {
+    icon: "📊",
+    title: "Data-Driven Decisions",
+    description: "Every design decision backed by user research, analytics, and measurable business outcomes. No gut-feeling design."
+  }
+];
+---
+<section id="about" class="py-24 px-6 md:px-12 bg-[var(--color-bg)]">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-[var(--font-display)] text-[clamp(2rem,4vw,3rem)] font-normal mb-3 heading-wipe">My Design Philosophy</h2>
+    <p class="text-lg text-[var(--color-text-secondary)] mb-12 reveal">
+      Principles that guide how I approach every project and challenge.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+      {cards.map((card) => (
+        <div class="stagger-item bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 card-hover">
+          <div class="w-12 h-12 bg-[var(--color-accent-light)] rounded-xl flex items-center justify-center text-2xl mb-5">
+            {card.icon}
+          </div>
+          <h3 class="text-lg font-semibold mb-2">{card.title}</h3>
+          <p class="text-[var(--color-text-secondary)] text-[0.95rem] leading-relaxed">{card.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
