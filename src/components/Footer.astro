@@ -1,19 +1,21 @@
 ---
 ---
-<footer id="contact" class="py-20 px-6 md:px-12 bg-[var(--color-bg)] relative overflow-hidden">
+<footer id="contact" class="pt-10 pb-20 px-6 md:px-10 bg-[var(--color-bg)] relative overflow-hidden">
   <!-- Subtle gradient -->
   <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(220,180,240,0.08),transparent_70%)] pointer-events-none"></div>
 
   <div class="max-w-4xl mx-auto text-center relative z-10">
-    <h2 class="font-[var(--font-display)] text-[clamp(2rem,4vw,3rem)] font-normal text-[var(--color-text-secondary)] mb-4 heading-wipe">Get in Touch</h2>
+    <h2 class="font-display text-[clamp(2.2rem,5vw,3.2rem)] font-normal text-[var(--color-text-secondary)] mb-4 heading-wipe">Get in Touch</h2>
     <p class="text-lg text-[var(--color-text-muted)] mb-10 reveal">
       Open to collaborating, speaking engagements, and new opportunities. Let's connect.
     </p>
 
     <div class="reveal">
-      <button onclick="copyEmail()" class="text-[var(--color-accent)] text-lg font-medium hover:underline cursor-pointer bg-transparent border-none">
+      <button onclick="copyEmail()" class="inline-flex items-center gap-2 text-[var(--color-accent)] text-lg font-medium hover:underline cursor-pointer bg-transparent border-none group transition-all">
         schonegg.jordan@gmail.com
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:opacity-100 transition-opacity" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
       </button>
+      <p class="text-xs text-[var(--color-text-muted)] mt-2">Click to copy</p>
     </div>
   </div>
 

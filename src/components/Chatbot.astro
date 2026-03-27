@@ -1,0 +1,265 @@
+---
+---
+<!-- Chat overlay -->
+<div id="chat-overlay" class="fixed inset-0 z-200 hidden">
+  <!-- Backdrop -->
+  <div id="chat-backdrop" class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+
+  <!-- Chat panel -->
+  <div id="chat-panel" class="absolute bottom-6 left-6 right-6 md:left-auto md:right-8 md:bottom-8 md:w-[420px] bg-white rounded-2xl shadow-2xl border border-[var(--color-border)] flex flex-col max-h-[80vh] overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300">
+
+    <!-- Header -->
+    <div class="flex items-center gap-3 p-5 border-b border-[var(--color-border)]">
+      <img src="/images/avatar-face.png" alt="Jordan" class="w-10 h-10 rounded-full object-cover" />
+      <div class="flex-1">
+        <div class="font-semibold text-sm text-[var(--color-text)]">Jordan Schonegg</div>
+        <div class="text-xs text-[var(--color-accent)] flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 bg-[var(--color-accent)] rounded-full status-pulse"></span>
+          Usually responds instantly
+        </div>
+      </div>
+      <button id="chat-close" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[var(--color-bg-warm)] transition-colors cursor-pointer border-none bg-transparent">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Messages -->
+    <div id="chat-messages" class="flex-1 overflow-y-auto p-5 space-y-4 min-h-[300px]">
+      <!-- Welcome message -->
+      <div class="flex gap-3">
+        <img src="/images/avatar-face.png" alt="Jordan" class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1" />
+        <div class="bg-[var(--color-bg-warm)] rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%]">
+          <p class="text-sm text-[var(--color-text)] leading-relaxed">Hey! I'm Jordan — thanks for stopping by. Ask me anything about my design experience, process, or what I'm looking for next. I don't do generic — so neither will my answers.</p>
+        </div>
+      </div>
+
+      <!-- Quick prompts -->
+      <div class="flex flex-wrap gap-2 pl-11">
+        <button class="chat-prompt px-3 py-1.5 bg-white border border-[var(--color-border)] rounded-full text-xs font-medium text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors cursor-pointer">What do you design?</button>
+        <button class="chat-prompt px-3 py-1.5 bg-white border border-[var(--color-border)] rounded-full text-xs font-medium text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors cursor-pointer">Tell me about your process</button>
+        <button class="chat-prompt px-3 py-1.5 bg-white border border-[var(--color-border)] rounded-full text-xs font-medium text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors cursor-pointer">What's agent-first design?</button>
+        <button class="chat-prompt px-3 py-1.5 bg-white border border-[var(--color-border)] rounded-full text-xs font-medium text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors cursor-pointer">Are you available?</button>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="p-4 border-t border-[var(--color-border)]">
+      <form id="chat-form" class="flex gap-2">
+        <input id="chat-input" type="text" placeholder="Ask me anything..." autocomplete="off" class="flex-1 px-4 py-2.5 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-full text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors" />
+        <button type="submit" class="w-10 h-10 bg-[var(--color-text)] rounded-full flex items-center justify-center flex-shrink-0 cursor-pointer border-none hover:bg-[var(--color-accent)] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+const responses = {
+  greeting: [
+    "Hey! Great to meet you. I'm a Senior Product Designer who lives at the intersection of complex systems and human delight. What would you like to know?",
+    "Hi there! I'm Jordan — I design things that make regulated industries actually feel human. What's on your mind?"
+  ],
+
+  whatYouDesign: [
+    "I design complex enterprise systems that people don't dread using. Right now that means mortgage origination platforms, AI-powered loan review tools, and data validation systems. The stuff that usually looks like it was designed by a committee in 2008? I make it feel like it was designed by someone who actually cares. Because I do.",
+  ],
+
+  process: [
+    "My process is fast and opinionated. I prototype in 48 hours, not 4 weeks. Real users see real artifacts within days — not decks about artifacts. I run research in parallel with building because the best insights come from testing real things, not hypotheticals. The meeting to discuss a feature shouldn't take longer than building it.",
+  ],
+
+  agentFirst: [
+    "Agent-first design is my thesis for 2026 and beyond. Your product won't just serve human users — it'll serve their AI agents. I design interfaces that are legible to machines AND delightful for humans. That means semantic structure, API-first architecture, and graceful human-agent handoffs. Every interface I ship can be navigated by an AI agent. Because your next customer might send their agent first.",
+  ],
+
+  available: [
+    "Yes! I'm actively looking for my next Senior+ Product Design role. I'm especially drawn to teams working on fintech, AI-native products, or complex B2B systems. I thrive in rapid iteration environments where design has a real seat at the table — not just a ticket queue. If your team values speed, craft, and honest feedback, we should talk.",
+  ],
+
+  experience: [
+    "I've spent the last several years leading design for a mortgage fintech company — taking it from 'design as afterthought' to 'design at the table from Day 1.' I've shipped AI-powered loan review platforms, redesigned pre-approval flows that cut drop-off by 34%, and built a design team from scratch. Before that, I was the first design hire at a fintech startup where I learned that speed creates learning. The more you ship, the better your judgment gets.",
+  ],
+
+  tools: [
+    "Figma is home base — I live there. But I'm not precious about tools. I prototype in whatever gets us to real feedback fastest: Figma prototypes, coded prototypes, even paper sketches. For design systems I use Figma with tokens. For research, I use whatever gets me in front of real users — Maze, UserTesting, or just hopping on a call. The tool doesn't matter. The insight does.",
+  ],
+
+  philosophy: [
+    "Four principles guide everything I do: First, agents are your first users — design for machines AND humans. Second, speed creates learning — ship fast, learn fast, refine based on reality. Third, judgment over process — I trust craft and intuition alongside research, not instead of it. Fourth, compliance can be delightful — just because it's regulated doesn't mean it has to feel cold.",
+  ],
+
+  teamFit: [
+    "I'm a great fit if you're in fintech, mortgage, or complex B2B. If you value rapid iteration, cross-functional collaboration, and designers who push back (respectfully). I'm probably NOT your person if design is order-taking, if there's no user access or research budget, or if you're in a waterfall-only environment. I believe in radical transparency about fit — it saves everyone time.",
+  ],
+
+  whyHire: [
+    "Because I don't just make things pretty — I make complex systems feel obvious. I've shipped products in one of the most heavily regulated industries (mortgage) and made them feel human. I move fast without breaking trust. I build teams, not just screens. And I'm obsessed with the craft in a way that raises the bar for everyone around me. Also, I'll tell you when something's a bad idea. You want that person on your team.",
+  ],
+
+  salary: [
+    "I'd rather talk about the right role first and comp second — but I'm transparent: I'm targeting Senior to Staff-level compensation that reflects the complexity of the problems I solve and the impact I deliver. Happy to discuss specifics once we're aligned on the opportunity.",
+  ],
+
+  remote: [
+    "I work best in remote-first or hybrid setups. I've led design teams distributed across time zones and shipped complex products without ever being in the same room. That said, I'm not allergic to an office — I just believe the best work happens when you optimize for deep focus and intentional collaboration, not proximity.",
+  ],
+
+  outsideWork: [
+    "Outside of design? I speak at events and mentor young designers — paying it forward matters to me. On the personal side, I'm the self-appointed team mom for all of my kids' sports teams (yes, all of them). I volunteer, I show up, I bring the snacks. And right now I'm teaching myself to cross stitch, which is basically pixel art with thread. Turns out patience in design translates pretty well to tiny x's on fabric.",
+  ],
+
+  mentoring: [
+    "Mentoring is one of the things I'm most passionate about outside of my day job. I regularly speak at design events and work one-on-one with early-career designers. Watching someone go from unsure to unstoppable? That's the best feeling. Design changed my life — I want to help it change someone else's too.",
+  ],
+
+  fallback: [
+    "That's a great question — and honestly, I'd rather give you a real answer over coffee (or a Zoom call) than a chatbot response. Drop me a line at schonegg.jordan@gmail.com and let's talk properly.",
+    "I appreciate the curiosity! That one's better suited for a real conversation. Reach out at schonegg.jordan@gmail.com — I respond fast and I don't ghost.",
+  ]
+};
+
+function classifyQuestion(input) {
+  const q = input.toLowerCase();
+
+  if (/^(hi|hey|hello|sup|yo|what'?s up|howdy)/.test(q)) return 'greeting';
+  if (/what (do you|kind|type).*(design|build|create|make|work)/.test(q) || /your work|portfolio|projects/.test(q)) return 'whatYouDesign';
+  if (/process|workflow|how do you (work|design|approach)|methodology/.test(q)) return 'process';
+  if (/agent.?first|ai.?(first|native)|machine|agent/.test(q)) return 'agentFirst';
+  if (/available|hiring|open to|looking|status|taking on/.test(q)) return 'available';
+  if (/experience|background|career|history|where.*(work|been)|resume/.test(q)) return 'experience';
+  if (/tool|figma|sketch|software|tech stack|prototype/.test(q)) return 'tools';
+  if (/philosophy|principles?|values?|believe|approach to design/.test(q)) return 'philosophy';
+  if (/(good )?fit|team|culture|what kind of (team|company)|where.*thrive/.test(q)) return 'teamFit';
+  if (/why.*(hire|pick|choose)|what makes you|stand out|different/.test(q)) return 'whyHire';
+  if (/salary|comp|compensation|pay|rate|money/.test(q)) return 'salary';
+  if (/remote|hybrid|office|location|where.*(based|located)/.test(q)) return 'remote';
+  if (/mentor|speak|speaking|engagement|teach|coaching|give back|community/.test(q)) return 'mentoring';
+  if (/spare time|free time|outside.*(work|design)|hobbi|personal|fun|for fun|weekends?|off.?hours|life outside|do for fun|interests?/.test(q)) return 'outsideWork';
+
+  return 'fallback';
+}
+
+function getResponse(category) {
+  const options = responses[category];
+  return options[Math.floor(Math.random() * options.length)];
+}
+
+function addMessage(text, isUser) {
+  const container = document.getElementById('chat-messages');
+  const wrapper = document.createElement('div');
+  wrapper.className = isUser ? 'flex gap-3 justify-end' : 'flex gap-3';
+
+  if (isUser) {
+    wrapper.innerHTML = `
+      <div class="bg-[var(--color-accent)] text-white rounded-2xl rounded-tr-sm px-4 py-3 max-w-[85%]">
+        <p class="text-sm leading-relaxed">${text}</p>
+      </div>`;
+  } else {
+    wrapper.innerHTML = `
+      <img src="/images/avatar-face.png" alt="Jordan" class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1" />
+      <div class="bg-[var(--color-bg-warm)] rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%]">
+        <p class="text-sm text-[var(--color-text)] leading-relaxed">${text}</p>
+      </div>`;
+  }
+
+  // Animate in
+  wrapper.style.opacity = '0';
+  wrapper.style.transform = 'translateY(8px)';
+  container.appendChild(wrapper);
+  requestAnimationFrame(() => {
+    wrapper.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    wrapper.style.opacity = '1';
+    wrapper.style.transform = 'translateY(0)';
+  });
+
+  container.scrollTop = container.scrollHeight;
+}
+
+function showTyping() {
+  const container = document.getElementById('chat-messages');
+  const typing = document.createElement('div');
+  typing.id = 'typing-indicator';
+  typing.className = 'flex gap-3';
+  typing.innerHTML = `
+    <img src="/images/avatar-face.png" alt="Jordan" class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1" />
+    <div class="bg-[var(--color-bg-warm)] rounded-2xl rounded-tl-sm px-4 py-3">
+      <div class="flex gap-1 items-center h-5">
+        <span class="w-2 h-2 bg-[var(--color-text-muted)] rounded-full animate-bounce" style="animation-delay:0s"></span>
+        <span class="w-2 h-2 bg-[var(--color-text-muted)] rounded-full animate-bounce" style="animation-delay:0.15s"></span>
+        <span class="w-2 h-2 bg-[var(--color-text-muted)] rounded-full animate-bounce" style="animation-delay:0.3s"></span>
+      </div>
+    </div>`;
+  container.appendChild(typing);
+  container.scrollTop = container.scrollHeight;
+}
+
+function removeTyping() {
+  document.getElementById('typing-indicator')?.remove();
+}
+
+function handleSubmit(text) {
+  if (!text.trim()) return;
+
+  // Remove quick prompts after first message
+  document.querySelectorAll('.chat-prompt').forEach(el => el.closest('.flex.flex-wrap')?.remove());
+
+  addMessage(text, true);
+
+  const category = classifyQuestion(text);
+
+  showTyping();
+
+  // Simulate natural typing delay
+  const delay = 800 + Math.random() * 1200;
+  setTimeout(() => {
+    removeTyping();
+    addMessage(getResponse(category), false);
+  }, delay);
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('chat-overlay');
+  const panel = document.getElementById('chat-panel');
+  const backdrop = document.getElementById('chat-backdrop');
+  const closeBtn = document.getElementById('chat-close');
+  const form = document.getElementById('chat-form');
+  const input = document.getElementById('chat-input');
+
+  // Open chat
+  window.openChat = function() {
+    overlay.classList.remove('hidden');
+    requestAnimationFrame(() => {
+      panel.style.opacity = '1';
+      panel.style.transform = 'translateY(0)';
+    });
+    setTimeout(() => input.focus(), 300);
+  };
+
+  // Close chat
+  function closeChat() {
+    panel.style.opacity = '0';
+    panel.style.transform = 'translateY(16px)';
+    setTimeout(() => overlay.classList.add('hidden'), 300);
+  }
+
+  closeBtn.addEventListener('click', closeChat);
+  backdrop.addEventListener('click', closeChat);
+
+  // Handle form submit
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const text = input.value;
+    input.value = '';
+    handleSubmit(text);
+  });
+
+  // Handle quick prompts
+  document.querySelectorAll('.chat-prompt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      handleSubmit(btn.textContent);
+    });
+  });
+});
+</script>
