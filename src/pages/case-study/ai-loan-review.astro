@@ -1,0 +1,249 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+---
+
+<Layout title="AI-Powered Loan Review Platform — Case Study">
+  <Navbar />
+  <main class="pt-28 pb-24 px-6 md:px-10">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Back -->
+      <a href="/#projects" class="inline-flex items-center gap-2 text-[var(--color-text-secondary)] text-sm font-medium mb-12 no-underline hover:text-[var(--color-text)] transition-colors group">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-1" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Portfolio
+      </a>
+
+      <!-- Header -->
+      <div class="mb-12 reveal">
+        <span class="inline-block px-3 py-1 border border-[var(--color-border)] rounded-full text-[10px] font-semibold uppercase tracking-widest text-[var(--color-text-secondary)] mb-5">AI-Powered Design</span>
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-normal leading-tight mb-4">AI-Powered Loan Review Platform</h1>
+        <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed">Automating data validation for mortgage loan boarding & servicing</p>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-3 gap-4 mb-16 reveal">
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+          <span class="font-display text-3xl text-[var(--color-accent)] block mb-1">63%</span>
+          <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-widest">Reduction in Review Time</span>
+        </div>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+          <span class="font-display text-3xl text-[var(--color-accent)] block mb-1">22→8 min</span>
+          <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-widest">Avg. Loan Review</span>
+        </div>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+          <span class="font-display text-3xl text-[var(--color-accent)] block mb-1">150+</span>
+          <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-widest">Daily Active Users</span>
+        </div>
+      </div>
+
+      <!-- Role -->
+      <div class="mb-16 reveal">
+        <div class="flex flex-wrap gap-x-10 gap-y-3 text-sm text-[var(--color-text-secondary)] border-t border-b border-[var(--color-border)] py-5">
+          <div><span class="font-semibold text-[var(--color-text)]">Role:</span> Product Designer (end-to-end)</div>
+          <div><span class="font-semibold text-[var(--color-text)]">Platform:</span> Web application (desktop-first)</div>
+          <div><span class="font-semibold text-[var(--color-text)]">Stakeholders:</span> Loan reviewers, ops managers, compliance, engineering</div>
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Overview</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed">
+          I led the product design for an AI-powered data validation platform that streamlines the mortgage loan boarding and servicing review process. The platform leverages artificial intelligence to automate the validation of loan data, drastically reducing manual review time while maintaining compliance and accuracy standards.
+        </p>
+      </section>
+
+      <!-- The Problem -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">The Problem</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          Loan boarding for mortgage servicing requires reviewers to manually validate dozens of data points across each loan file: borrower details, loan type, amounts, compliance flags, and SLA deadlines. The existing workflow was entirely manual, requiring reviewers to cross-reference multiple systems and documents for each loan.
+        </p>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 space-y-4">
+          <h3 class="text-sm font-semibold uppercase tracking-widest text-[var(--color-text-muted)] mb-2">Key Pain Points</h3>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Time-intensive reviews:</strong> Each loan took an average of 22 minutes to validate, creating bottlenecks during high-volume periods</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">SLA pressure:</strong> Reviewers frequently missed SLA deadlines due to volume, leading to compliance risk</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Context switching:</strong> Reviewers toggled between 3–4 different tools to gather information for a single review</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Error-prone process:</strong> Manual data entry and validation led to inconsistencies and rework</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design Approach -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Design Approach</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          I conducted contextual inquiries and shadowed loan reviewers to understand their existing workflow. I interviewed operations managers to map out SLA requirements and compliance constraints. This research revealed that the majority of review time was spent on repetitive data checks that could be automated, while reviewers needed to focus their expertise on exception handling and flagged items.
+        </p>
+
+        <h3 class="text-lg font-semibold mb-4">Key Design Decisions</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Centralized Queue View</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Consolidated all loan reviews into a single, filterable dashboard so reviewers can prioritize by SLA urgency, loan type, or assignment.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">AI-Driven Progress Tracking</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Introduced a validation progress indicator (e.g., 12/24 checks complete) so reviewers can see what's been auto-validated vs. requiring manual attention.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Smart Flagging System</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Surfaces exceptions and anomalies identified by the AI, allowing reviewers to focus only on items that need human judgment.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">SLA Visibility</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Color-coded SLA indicators provide at-a-glance urgency cues. Green for complete, orange for approaching deadline.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Solution: Reviewer Queue -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">The Solution</h2>
+
+        <h3 class="text-lg font-semibold mb-3">Reviewer Queue</h3>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          The reviewer queue serves as the primary workspace. It provides a comprehensive view of all assigned loans with real-time progress tracking, SLA status, and quick-access filters. The AI engine runs validation checks in the background, updating progress indicators as data points are verified.
+        </p>
+
+        <!-- Screenshot -->
+        <div class="bg-[var(--color-bg-warm)] rounded-xl border border-[var(--color-border)] p-4 mb-6 overflow-hidden">
+          <img src="/images/ai-loan-platform.png" alt="Reviewer Queue — All Loans view with AI validation progress and SLA tracking" class="w-full rounded-md shadow-sm" loading="lazy" />
+        </div>
+        <p class="text-xs text-[var(--color-text-muted)] italic mb-8">Fig 1. Reviewer Queue. All Loans view with AI validation progress and SLA tracking</p>
+
+        <div class="space-y-3 mb-12">
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Tab navigation:</strong> All Loans / In Progress / Completed — filter by status without losing context</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Progress bar with ratio (12/24):</strong> Shows how many AI validation checks have been completed per loan</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Flag indicators:</strong> Orange flags mark loans with AI-detected anomalies; unflagged loans passed all automated checks</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">SLA column with color coding:</strong> Green "Complete" badges, orange countdown days (2d, 3d) for at-risk loans</p>
+          </div>
+        </div>
+
+        <!-- Loan Review Detail -->
+        <h3 class="text-lg font-semibold mb-3">Loan Review Detail: AI-Assisted Rule Validation</h3>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          When a reviewer clicks "Start Review," they enter the core workspace where AI-powered validation happens. This is the screen most directly responsible for cutting review times from 22 minutes down to 8 minutes. It fundamentally changes the reviewer's task from "find and verify everything" to "confirm or correct what the AI has already checked."
+        </p>
+
+        <div class="space-y-3">
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">AI Confidence Scores:</strong> Each rule displays a confidence percentage (92%, 88%). High-confidence items can be approved quickly; lower scores signal where to invest time. This triaging mechanism is the primary driver of time savings.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Discrepancy Detection:</strong> The AI surfaces mismatches between system data and source documents (e.g., "System $78,500/year vs Document $75,000/year"). Yellow alerts draw the eye directly to conflicts.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Source Document Linking:</strong> Each data point links to its exact source (e.g., "W-2 Form 2023, Page 1, Box 1, Line 3"). One-click verification eliminates context switching.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Radio Button Resolution:</strong> When a discrepancy is found, the reviewer selects the correct value via simple radio buttons — turning complex judgment calls into clear, documented decisions.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Pragmatic Category Separation:</strong> Each validation category groups rules tied to a specific document type. All W-2 rules in one category, all pay stub rules in another — reducing cognitive load by letting reviewers work through one source document at a time.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-6">Results & Impact</h2>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
+          <div class="grid grid-cols-3 text-sm font-semibold uppercase tracking-widest text-[var(--color-text-muted)] border-b border-[var(--color-border)] bg-[var(--color-bg-warm)]">
+            <div class="p-4">Metric</div>
+            <div class="p-4">Before</div>
+            <div class="p-4">After</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-medium text-[var(--color-text)]">Avg. Review Time</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">22 minutes</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">8 minutes</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-medium text-[var(--color-text)]">Time Reduction</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">N/A</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">63%</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm">
+            <div class="p-4 font-medium text-[var(--color-text)]">Daily Active Users</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">N/A</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">150+</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Takeaways -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Key Takeaways</h2>
+        <div class="space-y-3">
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">The AI validation engine handled repetitive, rules-based checks, freeing reviewers to apply expertise on exceptions and edge cases</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">The centralized queue with SLA visibility eliminated separate tracking spreadsheets and reduced missed deadlines</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Strong daily adoption (150+ users) validated usability — minimal training was required for onboarding</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">The flagging system increased reviewer confidence by surfacing exactly which loans needed attention, reducing cognitive load and decision fatigue</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reflections -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Reflections</h2>
+        <div class="bg-[var(--color-accent-light)] border-l-[3px] border-[var(--color-accent)] rounded-r-xl p-6">
+          <p class="text-[var(--color-text-secondary)] leading-relaxed text-sm">
+            Designing for AI-augmented workflows taught me the importance of <strong class="text-[var(--color-text)]">transparency</strong>. Reviewers needed to trust the AI's output before they'd rely on it. The progress indicator (12/24 checks) was a key trust-building element, showing users exactly what the AI had validated rather than presenting a black-box result.
+          </p>
+        </div>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mt-6 text-sm">
+          Future iterations would explore inline AI explanations for flagged items, batch review workflows for high-volume periods, and deeper analytics dashboards for operations managers to monitor team performance and SLA compliance trends.
+        </p>
+      </section>
+
+      <!-- Back to portfolio -->
+      <div class="text-center pt-8 border-t border-[var(--color-border)]">
+        <a href="/#projects" class="inline-flex items-center gap-2 text-[var(--color-text-secondary)] font-medium text-sm hover:text-[var(--color-text)] transition-colors no-underline group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-1" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          Back to All Projects
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>

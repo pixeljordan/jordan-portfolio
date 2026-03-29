@@ -6,6 +6,7 @@ const projects = [
     description: "Designed an AI-powered data validation platform that cut mortgage loan review time by 63%, serving 150+ daily active users with smart flagging and confidence scoring.",
     image: "/images/ai-loan-platform.png",
     device: "desktop",
+    link: "/case-study/ai-loan-review",
     reverse: false
   },
   {
@@ -14,22 +15,6 @@ const projects = [
     description: "A strategic product design case study showcasing rapid iteration, collaborative discovery, and scalable architecture that grew from 25-50 monthly orders to over 18,000.",
     image: "/images/order-management.png",
     device: "desktop",
-    reverse: true
-  },
-  {
-    tag: "Research",
-    title: "Hack for Good: Child Therapy Tools",
-    description: "48-hour hackathon demonstrating Lean UX principles and Nielsen's heuristics to create impactful tools for child therapy professionals.",
-    image: "/images/child-therapy.png",
-    device: "ipad",
-    reverse: false
-  },
-  {
-    tag: "Mobile",
-    title: "PROOF: Shame-Aware EdTech Design",
-    description: "A fraction comparison practice tool for high school students who are behind, shaped by behavioral science, learning research, and radical empathy.",
-    device: "mobile",
-    status: "Prototype available",
     reverse: true
   },
   {
@@ -80,12 +65,26 @@ const projects = [
             <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed mb-5">
               {project.description}
             </p>
-            <span class="inline-flex items-center gap-2 text-[var(--color-text-muted)] text-xs font-medium uppercase tracking-widest">
-              Case study available on request
-            </span>
+            {project.link ? (
+              <a href={project.link} class="link-arrow no-underline">
+                View Case Study
+                <span class="arrow">&rarr;</span>
+              </a>
+            ) : (
+              <span class="inline-flex items-center gap-2 text-[var(--color-text-muted)] text-xs font-medium uppercase tracking-widest">
+                Case study available on request
+              </span>
+            )}
           </div>
         </div>
       ))}
+    </div>
+
+    <div class="text-center mt-16 reveal">
+      <a href="/additional-projects" class="inline-flex items-center gap-2 text-[var(--color-text-secondary)] font-medium text-sm hover:text-[var(--color-text)] transition-colors no-underline group">
+        Additional Projects
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
     </div>
   </div>
 </section>
