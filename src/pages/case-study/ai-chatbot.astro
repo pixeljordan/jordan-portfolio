@@ -1,0 +1,452 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+---
+
+<Layout title="Invisible AI: Mortgage Prequalification That Feels Human — Case Study">
+  <Navbar />
+  <main class="pt-28 pb-24 px-6 md:px-10">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Back -->
+      <a href="/#projects" class="inline-flex items-center gap-2 text-[var(--color-text-secondary)] text-sm font-medium mb-12 no-underline hover:text-[var(--color-text)] transition-colors group">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-1" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Portfolio
+      </a>
+
+      <!-- Header -->
+      <div class="mb-12 reveal">
+        <span class="inline-block px-3 py-1 border border-[var(--color-border)] rounded-full text-[10px] font-semibold uppercase tracking-widest text-[var(--color-text-secondary)] mb-5">Conversational AI</span>
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-normal leading-tight mb-4">Invisible AI: Mortgage Prequalification That Feels Human</h1>
+        <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed">Designing an AI chatbot people actually return to — a complete product framework covering user journey design, emotional design decisions, retention strategy, and multi-brand design systems.</p>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-3 gap-4 mb-16 reveal">
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+          <span class="font-display text-3xl text-[var(--color-accent)] block mb-1">5-day</span>
+          <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-widest">Session Arc</span>
+        </div>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+          <span class="font-display text-3xl text-[var(--color-accent)] block mb-1">3</span>
+          <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-widest">Design Systems</span>
+        </div>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+          <span class="font-display text-3xl text-[var(--color-accent)] block mb-1">8</span>
+          <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-widest">Screens Built</span>
+        </div>
+      </div>
+
+      <!-- Role -->
+      <div class="mb-16 reveal">
+        <div class="flex flex-wrap gap-x-10 gap-y-3 text-sm text-[var(--color-text-secondary)] border-t border-b border-[var(--color-border)] py-5">
+          <div><span class="font-semibold text-[var(--color-text)]">Role:</span> Product Designer (end-to-end)</div>
+          <div><span class="font-semibold text-[var(--color-text)]">Platform:</span> AI-powered conversational product</div>
+          <div><span class="font-semibold text-[var(--color-text)]">Context:</span> Enterprise B2B, non-technical end users</div>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="mb-16 reveal">
+        <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)]">
+          <img src="/images/chatbot-landing-hero.png" alt="AI chatbot landing page — Find out what you can actually afford" class="w-full h-auto" loading="lazy" />
+        </div>
+        <p class="text-xs text-[var(--color-text-muted)] text-center mt-3">Fig 1 — Landing page with AI advisor chat widget and pre-qualification CTA</p>
+      </div>
+
+      <!-- Overview: The Product -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">The Product</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          This is an AI-powered conversational tool that conducts structured one-on-one sessions with users over a fixed multi-day arc. Through a series of focused questions, it builds a deep understanding of how users actually work — then delivers a concrete recommendation or output. The intelligence grows with each session. The outcome is delivered at the end of the arc.
+        </p>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+            <span class="font-display text-2xl text-[var(--color-text)] block mb-1">5 min</span>
+            <span class="text-xs text-[var(--color-text-muted)] leading-snug block">per session. Triggered via messaging platform. Anonymous.</span>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+            <span class="font-display text-2xl text-[var(--color-text)] block mb-1">5 days</span>
+            <span class="text-xs text-[var(--color-text-muted)] leading-snug block">from first session to final output. Each day builds on the last.</span>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+            <span class="font-display text-2xl text-[var(--color-text)] block mb-1">1 output</span>
+            <span class="text-xs text-[var(--color-text-muted)] leading-snug block">Actionable recommendation. Evidence-backed. Personalised.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Problem -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">The Design Problem</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          The core challenge of a multi-session AI product is not the AI — it's the return rate. A user who completes Day 1 and never opens Day 2 generates no signal and no output. The design problem is not "how do we ask good questions?" It's "how do we make the user feel enough value from Day 1 that they come back for Day 2 — and Day 3, 4, and 5?"
+        </p>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 space-y-4">
+          <h3 class="text-sm font-semibold uppercase tracking-widest text-[var(--color-text-muted)] mb-2">Failure Modes</h3>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Tab closed in 8 seconds:</strong> No immediate signal of value. Generic landing. No outcome stated. User doesn't know why this is worth their time.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Day 1 completed, Day 2 ignored:</strong> Session ended without closure. No specific learning surfaced. No named open loop for tomorrow. Nothing making the next session feel urgent or interesting.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Answers become dishonest:</strong> User feels surveilled not heard. Jargon-heavy feedback badges. No acknowledgement that answers were understood. System-speak in the conversation.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Drop-off at Day 3–4:</strong> No visible accumulation of progress. No sense that something is being built. Nothing previewed that creates a completion pull toward the final day.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- The User Journey -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Three Moments That Determine Everything</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          Every design decision maps back to one of three moments. Most products obsess over the first and neglect the third entirely. All three need to be designed as distinct, intentional experiences — because return rate is determined at the exit, not the entrance.
+        </p>
+
+        <!-- Welcome Screen -->
+        <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)] mb-8">
+          <img src="/images/chatbot-welcome.png" alt="Horizon Advisor welcome screen with trust signals and CTA" class="w-full h-auto" loading="lazy" />
+        </div>
+        <p class="text-xs text-[var(--color-text-muted)] text-center mt-[-1.25rem] mb-8">Fig 2 — The welcome screen: outcome stated before the process, trust signals front and center</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-muted)] block mb-2">Moment 1 · 8 seconds</span>
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">The First Impression</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">The AI speaks first. The outcome is stated before the process. Personalised data is visible before question one. Trust built before the first answer is given.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-muted)] block mb-2">Moment 2 · 5 minutes</span>
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">The Data Gathering Session</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Every answer moves something visible. Key milestones trigger specific reactions. The user feels heard, not harvested. Intelligence is shown building in real time.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-muted)] block mb-2">Moment 3 · 17 seconds</span>
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">The Lasting Impression</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">A personalised goodbye — the user's name, a specific learning from today, a named preview of tomorrow. The session closes definitively. The next session is already framed.</p>
+          </div>
+        </div>
+
+        <!-- 5-Day Arc -->
+        <h3 class="text-lg font-semibold mb-4">The 5-Day Session Arc</h3>
+        <div class="space-y-3">
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">D1</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">The Warm Start:</strong> AI introduces itself with the user's own data already visible. Outcome leads. Trust signals embedded. Session ends with a specific learning surfaced and tomorrow's focus named.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">D2</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Prove You Listened:</strong> "Yesterday you told me X. I've been cross-referencing that with your data overnight." Not a summary — a continuation. The AI demonstrates it remembered and acted on what it heard.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">D3</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Value Delivery:</strong> At the halfway milestone, the AI delivers something back — a workflow analysis, a pattern summary, a first-look insight built from the user's specific answers. The user stops giving and starts receiving.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">D4</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">The Near-Miss Pull:</strong> A blurred or partially-visible version of the final output appears. The name of the recommendation is visible. The detail is obscured. One session away. The Zeigarnik effect creates completion drive.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">D5</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">The Payoff:</strong> The full output is revealed. Named contributors shown. Progress indicator turns to a completion state. The user's specific input is acknowledged as having shaped the result. Professional recognition, not a trophy.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conversational Flow Screenshots -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">The Conversational Flow</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          Every interaction is designed to feel like a conversation, not a form. Adaptive questions, contextual education, and a progress bar that moves with each answer.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div>
+            <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)]">
+              <img src="/images/chatbot-experience-question.png" alt="Experience level question with three adaptive paths" class="w-full h-auto" loading="lazy" />
+            </div>
+            <p class="text-xs text-[var(--color-text-muted)] text-center mt-3">Fig 3 — Adaptive experience question tailors the entire flow</p>
+          </div>
+          <div>
+            <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)]">
+              <img src="/images/chatbot-buy-refinance.png" alt="Buy or refinance question with contextual Good to Know tooltip" class="w-full h-auto" loading="lazy" />
+            </div>
+            <p class="text-xs text-[var(--color-text-muted)] text-center mt-3">Fig 4 — Contextual education: "Good to know" reduces anxiety mid-flow</p>
+          </div>
+        </div>
+
+        <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)] mb-4">
+          <img src="/images/chatbot-progress-bar.png" alt="Progress bar showing 10% to your letter" class="w-full h-auto" loading="lazy" />
+        </div>
+        <p class="text-xs text-[var(--color-text-muted)] text-center mb-4">Fig 5 — Outcome-framed progress: "10% to your letter" not "Question 2 of 15"</p>
+
+        <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)]">
+          <img src="/images/chatbot-faq-panel.png" alt="Full chat interface with Tips & FAQ side panel" class="w-full h-auto" loading="lazy" />
+        </div>
+        <p class="text-xs text-[var(--color-text-muted)] text-center mt-3">Fig 6 — Full conversation view with Tips & FAQ panel for self-service answers</p>
+      </section>
+
+      <!-- Design Decisions -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Key Design Decisions</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          Every element was redesigned to shift the experience from system-facing to human-facing — making the AI feel like a thoughtful colleague, not a data extraction tool.
+        </p>
+
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
+          <div class="grid grid-cols-3 text-sm font-semibold uppercase tracking-widest text-[var(--color-text-muted)] border-b border-[var(--color-border)] bg-[var(--color-bg-warm)]">
+            <div class="p-4">Element</div>
+            <div class="p-4">Before</div>
+            <div class="p-4">After</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-medium text-[var(--color-text)]">Visual Theme</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">Dark mode, crypto-adjacent</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">Warm light surfaces, considered typography</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-medium text-[var(--color-text)]">Feedback Badge</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">"Analysis complete in 3.4s"</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">"That explains a lot about your situation"</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-medium text-[var(--color-text)]">Progress</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">"Day 2 of 5 · Question 1 of 10"</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">"20% to your output" — outcome language</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-medium text-[var(--color-text)]">Session Exit</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">Ends when questions run out</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">17-second personalised goodbye sequence</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm">
+            <div class="p-4 font-medium text-[var(--color-text)]">Re-engagement</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">"Your next session is ready"</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">"Yesterday you told me X. I've been working on that overnight."</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Human Handoff + Near Completion -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Trust Through Escape Hatches</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          Users trust AI more when they know they can leave it. The human handoff modal and near-completion momentum are two sides of the same design principle: the user is always in control.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)]">
+              <img src="/images/chatbot-human-handoff.png" alt="Talk to Sarah modal with continue, schedule, or email options" class="w-full h-auto" loading="lazy" />
+            </div>
+            <p class="text-xs text-[var(--color-text-muted)] text-center mt-3">Fig 7 — Human escape hatch: continue in chat, schedule a call, or email</p>
+          </div>
+          <div>
+            <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)]">
+              <img src="/images/chatbot-credit-score.png" alt="Final question with Almost done banner and credit score options" class="w-full h-auto" loading="lazy" />
+            </div>
+            <p class="text-xs text-[var(--color-text-muted)] text-center mt-3">Fig 8 — Near-completion momentum: "Almost done — one question left!"</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Retention Strategy -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Retention Strategy: Beyond Streaks</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          Duolingo's streak mechanics are the most studied retention system in consumer apps. But those mechanics don't transfer to a professional AI product with a fixed arc and an opted-out user. Loss aversion in a professional context feels manipulative. Leaderboards destroy psychological safety and honest answers.
+        </p>
+        <div class="bg-[var(--color-accent-light)] border-l-[3px] border-[var(--color-accent)] rounded-r-xl p-6 mb-6">
+          <p class="text-[var(--color-text-secondary)] leading-relaxed text-sm italic">
+            "Duolingo keeps users coming back because they fear losing what they built. A well-designed AI chatbot keeps users coming back because they <strong class="text-[var(--color-text)]">want to see what gets built for them</strong>."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Progress Bar Replay</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Bar animates from 0 to current % when a session opens. Accumulated effort is visible before the first new answer. User feels invested before starting.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Consequence Framing</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">"The output will be less precise without today's session" — honest consequence, not emotional pressure. The user decides with full information.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Blurred Day 4 Preview</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Final output visible but obscured. Key labels visible. Detail hidden. One session away. The Zeigarnik effect — incompleteness creates completion drive, not guilt.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Graceful Recovery</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">"You missed yesterday. No problem — I saved your progress. Pick up exactly where you left off." Leniency increases engagement. Shame causes permanent dropout.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Milestone System -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Milestone System</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          The progress bar fills toward the output with each answer. At five percentage thresholds, something deliberate happens in the UI. Each milestone is more significant than the last — building toward a payoff that feels earned.
+        </p>
+
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
+          <div class="grid grid-cols-[60px_1fr_1fr] text-sm font-semibold uppercase tracking-widest text-[var(--color-text-muted)] border-b border-[var(--color-border)] bg-[var(--color-bg-warm)]">
+            <div class="p-4">%</div>
+            <div class="p-4">Bar Behaviour</div>
+            <div class="p-4">AI Response</div>
+          </div>
+          <div class="grid grid-cols-[60px_1fr_1fr] text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-display font-semibold text-[var(--color-accent)]">10%</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">Single accent pulse, fades. Quiet — like a nod.</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">"Good start. I'm already seeing patterns in your answers."</div>
+          </div>
+          <div class="grid grid-cols-[60px_1fr_1fr] text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-display font-semibold text-[var(--color-accent)]">25%</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">Shimmer sweeps left to right. A signal detected.</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">"A quarter of the way. Your answers are pointing somewhere clear."</div>
+          </div>
+          <div class="grid grid-cols-[60px_1fr_1fr] text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-display font-semibold text-[var(--color-accent)]">50%</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">Bar glows, pulses twice. Intelligence panel opens automatically.</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">"Halfway. Here's what your answers have built so far."</div>
+          </div>
+          <div class="grid grid-cols-[60px_1fr_1fr] text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-display font-semibold text-[var(--color-moderate)]">90%</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">Bar transitions to gold. Slow breathing animation. Blurred output card appears.</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">"Almost there. The output is ready — I just need these last few answers."</div>
+          </div>
+          <div class="grid grid-cols-[60px_1fr_1fr] text-sm">
+            <div class="p-4 font-display font-semibold text-[var(--color-moderate)]">100%</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">Gold pulse three times, settles to steady glow. "Your output is ready."</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">"Done. Here's what your answers built."</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results Delivery -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">The Payoff: Results Delivery</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          The final screen is the moment everything was designed around. The $485,000 estimate isn't just a number — it's the culmination of every answer, every trust signal, every "Good to know" moment. The audit trail gives internal teams full visibility without breaking the conversational experience.
+        </p>
+
+        <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)] mb-4">
+          <img src="/images/chatbot-results-full.png" alt="Complete results view with $485,000 estimate and internal audit trail" class="w-full h-auto" loading="lazy" />
+        </div>
+        <p class="text-xs text-[var(--color-text-muted)] text-center mb-8">Fig 9 — Full results view: pre-qualification estimate with monthly payment breakdown and internal audit trail</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)]">
+              <img src="/images/chatbot-results.png" alt="Results screen with $485,000 pre-qualification estimate" class="w-full h-auto" loading="lazy" />
+            </div>
+            <p class="text-xs text-[var(--color-text-muted)] text-center mt-3">Fig 10 — Results delivery: estimate, monthly payment, down payment, and APR</p>
+          </div>
+          <div>
+            <div class="bg-[var(--color-bg-warm)] rounded-xl overflow-hidden border border-[var(--color-border)]">
+              <img src="/images/chatbot-audit-trail.png" alt="Internal audit trail showing borrower information" class="w-full h-auto" loading="lazy" />
+            </div>
+            <p class="text-xs text-[var(--color-text-muted)] text-center mt-3">Fig 11 — Internal audit trail: structured borrower data for compliance</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design Systems -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Three Design Systems, One Experience</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          The same screens — same content, same interactions, same milestones — were built in three design systems. This demonstrates that the UX architecture is independent of visual styling and can be adapted to match any client's enterprise environment. The design token system makes rebranding for a new client a one-hour job.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Warm Precision</h4>
+            <p class="text-[var(--color-text-secondary)] text-xs leading-relaxed mb-3">DM Serif Display + DM Sans. Warm off-white background. Teal accent. Gold for milestone moments only. 12–16px radius. 1px borders.</p>
+            <span class="text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest">Considered, calm, trustworthy</span>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Fluent 2 — Microsoft</h4>
+            <p class="text-[var(--color-text-secondary)] text-xs leading-relaxed mb-3">Segoe UI Variable. White surfaces. Purple brand accent. 4–8px radius. Elevation shadows not borders.</p>
+            <span class="text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest">At home in Microsoft 365 / Teams</span>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Dark Mode — Raycast</h4>
+            <p class="text-[var(--color-text-secondary)] text-xs leading-relaxed mb-3">Inter font. Near-black background. Teal accent. Noise texture overlay. Ambient glow. 10–12px radius. White-at-opacity borders.</p>
+            <span class="text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest">Developer-facing or premium dark brand</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design Principles -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Design Principles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Nail the First Impression</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Lead with the outcome, not the process. Show you know the user before they answer anything. Kill anxiety before it forms. 8 seconds to earn the first tap.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Add Moments of Delight</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Delight in a professional context is not confetti or badges. It's the confidence bar moving when you answer. Your name on the final output. Recognition, not gamification.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Make Interactions Feel Dynamic</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Respond on touchstart. Directional chat bubbles. 400ms undo window on every answer. Typing indicator before every AI response. The interface should always know the user is there.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Takeaways -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Key Takeaways</h2>
+        <div class="space-y-3">
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Return rate is determined at the exit, not the entrance — the 17-second personalised goodbye sequence is more important than the landing page</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Professional retention doesn't come from fear of loss (streaks) — it comes from curiosity about what gets built for the user</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">The design token architecture proved that UX architecture can be fully decoupled from visual styling — three skins, one experience, one-hour rebranding</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">The session is what you design retention mechanics around. The arc is what you sell. Every design decision flows from knowing which one you're optimising.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reflections -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">What's Next</h2>
+        <div class="bg-[var(--color-accent-light)] border-l-[3px] border-[var(--color-accent)] rounded-r-xl p-6">
+          <p class="text-[var(--color-text-secondary)] leading-relaxed text-sm">
+            The working prototype demonstrates the core experience across 8 screens and 3 design systems. The next phase focuses on <strong class="text-[var(--color-text)]">making it award-worthy</strong> — touchstart responses on every interaction, directional bubble entry animations, 400ms undo windows, AI avatar breathing during thinking sequences, and progress bar replay on session load.
+          </p>
+        </div>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mt-6 text-sm">
+          Beyond polish: beta testing the full entry-to-session flow starting from the notification trigger, designing every unbuilt moment (final output reveal, missed session recovery, mobile-first layout, admin dashboard), and building the white-label system that makes deploying for a new client fast and consistent.
+        </p>
+      </section>
+
+      <!-- Back to portfolio -->
+      <div class="text-center pt-8 border-t border-[var(--color-border)]">
+        <a href="/#projects" class="inline-flex items-center gap-2 text-[var(--color-text-secondary)] font-medium text-sm hover:text-[var(--color-text)] transition-colors no-underline group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-1" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          Back to All Projects
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>
