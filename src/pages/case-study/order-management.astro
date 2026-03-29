@@ -1,0 +1,285 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+---
+
+<Layout title="Scaling for Growth: Multi-Tenant Order Management — Case Study">
+  <Navbar />
+  <main class="pt-28 pb-24 px-6 md:px-10">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Back -->
+      <a href="/#projects" class="inline-flex items-center gap-2 text-[var(--color-text-secondary)] text-sm font-medium mb-12 no-underline hover:text-[var(--color-text)] transition-colors group">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-1" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Portfolio
+      </a>
+
+      <!-- Header -->
+      <div class="mb-12 reveal">
+        <span class="inline-block px-3 py-1 border border-[var(--color-border)] rounded-full text-[10px] font-semibold uppercase tracking-widest text-[var(--color-text-secondary)] mb-5">Product</span>
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-normal leading-tight mb-4">Scaling for Growth: Multi-Tenant Order Management Platform</h1>
+        <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed">From 25 monthly orders to 18,000+ — a strategic product design case study in rapid iteration, collaborative discovery, and scalable architecture.</p>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-3 gap-4 mb-16 reveal">
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+          <span class="font-display text-3xl text-[var(--color-accent)] block mb-1">18,000+</span>
+          <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-widest">Monthly Orders</span>
+        </div>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+          <span class="font-display text-3xl text-[var(--color-accent)] block mb-1">720x</span>
+          <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-widest">Order Volume Growth</span>
+        </div>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 text-center">
+          <span class="font-display text-3xl text-[var(--color-accent)] block mb-1">3</span>
+          <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-widest">Enterprise Clients</span>
+        </div>
+      </div>
+
+      <!-- Role -->
+      <div class="mb-16 reveal">
+        <div class="flex flex-wrap gap-x-10 gap-y-3 text-sm text-[var(--color-text-secondary)] border-t border-b border-[var(--color-border)] py-5">
+          <div><span class="font-semibold text-[var(--color-text)]">Role:</span> Product Designer (end-to-end)</div>
+          <div><span class="font-semibold text-[var(--color-text)]">Platform:</span> Web application (multi-tenant SaaS)</div>
+          <div><span class="font-semibold text-[var(--color-text)]">Stakeholders:</span> Operations teams, lenders, vendors, engineering</div>
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Overview</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed">
+          I led the product design for a multi-tenant order management platform that scaled from handling 25–50 monthly orders to over 18,000. The platform serves as the operational backbone connecting lenders, vendors, and internal operations teams — managing the full lifecycle of real estate service orders from creation through fulfillment and billing.
+        </p>
+      </section>
+
+      <!-- The Problem -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Platform at Breaking Point</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          The existing platform was built for a single client processing a small volume of orders. As the business grew, the system buckled under the weight of new requirements: multiple clients with different workflows, growing order volumes, and increasingly complex vendor relationships. The team was spending more time on workarounds than on fulfilling orders.
+        </p>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 space-y-4">
+          <h3 class="text-sm font-semibold uppercase tracking-widest text-[var(--color-text-muted)] mb-2">Key Pain Points</h3>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Single-tenant architecture:</strong> Every new client required custom code and manual configuration, creating unsustainable technical debt</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Manual order routing:</strong> Operations staff manually assigned orders to vendors via spreadsheets, creating bottlenecks and errors at scale</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">No visibility across clients:</strong> Each client's orders were siloed, making it impossible for ops managers to see the full picture or allocate resources effectively</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-gaps)] font-bold mt-0.5">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Fragile vendor management:</strong> No standardized way to onboard vendors, track performance, or manage capacity across multiple client programs</p>
+          </div>
+        </div>
+
+        <!-- Old Experience Screenshot -->
+        <div class="bg-[var(--color-bg-card)] rounded-xl border border-[var(--color-border)] p-4 mt-8 overflow-hidden">
+          <img src="/images/order-old-experience.jpg" alt="Old User Experience — annotated screenshot showing unclear icons, scattered documents, too many buttons, and missing borrower info" class="w-full rounded-md shadow-sm" loading="lazy" />
+        </div>
+        <p class="text-xs text-[var(--color-text-muted)] italic mt-3">Fig 1. The existing interface suffered from unclear iconography, scattered information across multiple locations, excessive action buttons, and missing critical context like borrower details</p>
+      </section>
+
+      <!-- Design Approach -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Enterprise Client Partnership</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          I embedded directly with the enterprise client's operations team to understand their workflows from the inside. Through contextual inquiry sessions, stakeholder interviews, and process mapping workshops, I uncovered the gaps between what the platform offered and what enterprise-scale operations actually needed.
+        </p>
+
+        <h3 class="text-lg font-semibold mb-4">Discovery Insights</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Workflow Mapping</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Documented the full order lifecycle across 7 status states, revealing 3 previously invisible handoff points where orders were getting stuck or lost.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Role-Based Needs</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Identified 4 distinct user roles (lender, ops coordinator, vendor, admin) each needing different views, permissions, and workflows within the same platform.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Scaling Constraints</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">The client's growth projection required the platform to handle 10x current volume within 6 months — every design decision had to account for scale.</p>
+          </div>
+          <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5">
+            <h4 class="text-sm font-semibold text-[var(--color-accent)] mb-2">Configuration Over Code</h4>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Each client needed different product types, pricing rules, and vendor assignments — requiring a configuration-driven architecture rather than hardcoded logic.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Trio+ Methodology -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Product Trio+ Methodology</h2>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          I championed a Product Trio+ approach — design, product, and engineering working in tight collaboration with direct client input. This wasn't a waterfall handoff; it was continuous co-creation with weekly design reviews, rapid prototyping, and real-time feedback from the operations team using the product daily.
+        </p>
+        <div class="bg-[var(--color-accent-light)] border-l-[3px] border-[var(--color-accent)] rounded-r-xl p-6 mb-6">
+          <p class="text-[var(--color-text-secondary)] leading-relaxed text-sm">
+            <strong class="text-[var(--color-text)]">The key insight:</strong> Traditional enterprise software design relies on requirements documents and scheduled feedback cycles. By embedding with the client and running 2-week design sprints with live prototype testing, we compressed what would typically be a 6-month discovery phase into 6 weeks — without sacrificing depth.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">2-week design sprints:</strong> Each sprint delivered testable prototypes that the ops team could interact with and provide feedback on</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Weekly design reviews:</strong> Cross-functional sessions with design, product, engineering, and client stakeholders to align on priorities and trade-offs</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Real-time iteration:</strong> Designs were tested with live data scenarios, not hypotheticals — uncovering edge cases that spec-based design would have missed</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Solution -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">From Foundation to Enterprise Scale</h2>
+
+        <h3 class="text-lg font-semibold mb-3">Order Management Dashboard</h3>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          The redesigned order management dashboard serves as the central workspace for operations teams. It provides a unified view across all clients and tenants, with powerful filtering, search, and status tracking that scales from dozens to thousands of active orders.
+        </p>
+
+        <!-- Screenshot -->
+        <div class="bg-[var(--color-bg-warm)] rounded-xl border border-[var(--color-border)] p-4 mb-6 overflow-hidden">
+          <img src="/images/order-management.png" alt="Order Management Dashboard — Order detail view with event history and borrower info" class="w-full rounded-md shadow-sm" loading="lazy" />
+        </div>
+        <p class="text-xs text-[var(--color-text-muted)] italic mb-8">Fig 2. Order Detail view with event history timeline, borrower information, and product details</p>
+
+        <!-- Solutions Screenshot -->
+        <div class="bg-[var(--color-bg-card)] rounded-xl border border-[var(--color-border)] p-4 mb-6 overflow-hidden">
+          <img src="/images/order-solutions.jpg" alt="Solutions — annotated screenshot showing consolidated event history, visible borrower info, configurable user actions, and clear iconography" class="w-full rounded-md shadow-sm" loading="lazy" />
+        </div>
+        <p class="text-xs text-[var(--color-text-muted)] italic mb-8">Fig 3. The redesigned experience consolidates all events in one location, surfaces borrower info above the fold, and introduces configurable user actions with clear iconography</p>
+
+        <div class="space-y-3 mb-12">
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Event history timeline:</strong> Every order action is logged chronologically — from placement through completion — creating a full audit trail without manual documentation</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Multi-tenant data isolation:</strong> Each client's orders, vendors, and configurations are fully isolated while ops teams can see across tenants when needed</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Status-driven workflow:</strong> Orders progress through defined states (Placed → In Progress → Completed) with automated notifications and vendor assignments at each transition</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Contextual detail panel:</strong> Borrower info, product details, and vendor assignments are accessible from the order detail without leaving the page — eliminating the context switching that plagued the previous system</p>
+          </div>
+        </div>
+
+        <!-- Scalable Design System -->
+        <h3 class="text-lg font-semibold mb-3">Scalable Design System Implementation</h3>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+          To support multi-tenant customization without code changes, I designed a component-based system with configurable layouts, theming, and role-based views. This allowed new clients to be onboarded in days instead of weeks, with their unique workflows configured rather than coded.
+        </p>
+
+        <div class="space-y-3">
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Modular components:</strong> Reusable UI components that adapt to each client's product types, statuses, and data fields through configuration</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">Role-based access:</strong> Four distinct permission levels ensure each user type sees only what's relevant — lenders see their orders, vendors see their assignments, ops sees everything</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">-</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed"><strong class="text-[var(--color-text)]">White-label ready:</strong> The design system supports client-specific branding and configuration, enabling each tenant to feel like a custom product while running on shared infrastructure</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-6">Results & Impact</h2>
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
+          <div class="grid grid-cols-3 text-sm font-semibold uppercase tracking-widest text-[var(--color-text-muted)] border-b border-[var(--color-border)] bg-[var(--color-bg-warm)]">
+            <div class="p-4">Metric</div>
+            <div class="p-4">Before</div>
+            <div class="p-4">After</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-medium text-[var(--color-text)]">Monthly Orders</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">25–50</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">18,000+</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-medium text-[var(--color-text)]">Client Onboarding</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">Weeks (custom code)</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">Days (configuration)</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm border-b border-[var(--color-border)]">
+            <div class="p-4 font-medium text-[var(--color-text)]">Enterprise Clients</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">1</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">3</div>
+          </div>
+          <div class="grid grid-cols-3 text-sm">
+            <div class="p-4 font-medium text-[var(--color-text)]">Order Volume Growth</div>
+            <div class="p-4 text-[var(--color-text-secondary)]">N/A</div>
+            <div class="p-4 text-[var(--color-accent)] font-semibold">720x</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Takeaways -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Key Takeaways</h2>
+        <div class="space-y-3">
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Configuration-driven design dramatically reduced time-to-value for new clients — what previously required engineering sprints became admin-level setup</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">The Product Trio+ methodology compressed discovery and delivery timelines by keeping design, engineering, and client stakeholders in continuous alignment</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Designing for multi-tenancy from the ground up meant the platform could absorb 720x volume growth without architectural rework</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-[var(--color-accent)] font-bold mt-0.5 flex-shrink-0">+</span>
+            <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed">Embedding with the enterprise client's operations team surfaced requirements that traditional discovery methods would have missed — the difference between designing for how work should flow vs. how it actually flows</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reflections -->
+      <section class="mb-16 reveal">
+        <h2 class="font-display text-2xl font-normal mb-4">Innovation & Learning</h2>
+        <div class="bg-[var(--color-accent-light)] border-l-[3px] border-[var(--color-accent)] rounded-r-xl p-6">
+          <p class="text-[var(--color-text-secondary)] leading-relaxed text-sm">
+            This project taught me that <strong class="text-[var(--color-text)]">strategic design thinking drives exponential business results</strong>. The 720x growth wasn't just about building more features — it was about designing a flexible foundation that could absorb complexity without passing it to the user. Every design decision was evaluated against the question: "Will this still work when we're processing 10x this volume?"
+          </p>
+        </div>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mt-6 text-sm">
+          Future iterations would explore automated vendor matching based on performance metrics, predictive order volume forecasting for capacity planning, and deeper analytics dashboards for enterprise clients to self-serve operational insights.
+        </p>
+      </section>
+
+      <!-- Back to portfolio -->
+      <div class="text-center pt-8 border-t border-[var(--color-border)]">
+        <a href="/#projects" class="inline-flex items-center gap-2 text-[var(--color-text-secondary)] font-medium text-sm hover:text-[var(--color-text)] transition-colors no-underline group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:-translate-x-1" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          Back to All Projects
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>
