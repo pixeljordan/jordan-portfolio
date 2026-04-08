@@ -18,6 +18,7 @@ const { title = "Jordan Schonegg — Senior Product Designer" } = Astro.props;
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[300] focus:bg-[var(--color-accent)] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-medium focus:no-underline">Skip to content</a>
   <div class="scroll-progress" id="scroll-progress"></div>
   <slot />
   <div class="copy-toast" id="copy-toast">

@@ -331,3 +331,32 @@ body {
 .mobile-nav.open {
   transform: translateY(0);
 }
+
+/* ===== AI CONTEXT TOGGLE (Experience) ===== */
+.ai-context {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  opacity: 0;
+}
+
+.ai-context.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Toggle arrow rotation */
+button:has(+ .ai-context.active) {
+  color: var(--color-accent);
+}
+
+/* ===== PROCESS CARD HOVER ===== */
+.process-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45, 138, 126, 0.4);
+  box-shadow: 0 16px 40px rgba(45, 138, 126, 0.1), 0 0 0 1px rgba(45, 138, 126, 0.08);
+}

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import Projects from '../components/Projects.astro';
+import Experience from '../components/Experience.astro';
 import Philosophy from '../components/Philosophy.astro';
 import FitCheck from '../components/FitCheck.astro';
 import Footer from '../components/Footer.astro';
@@ -12,8 +13,10 @@ import Chatbot from '../components/Chatbot.astro';
 <Layout>
   <Navbar />
   <main>
+    <div id="main-content"></div>
     <Hero />
     <Projects />
+    <Experience />
     <Philosophy />
     <FitCheck />
   </main>

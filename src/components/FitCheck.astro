@@ -13,18 +13,18 @@ const adapt = [
   "Established design systems needing evolution",
   "Remote-first or hybrid teams"
 ];
-const notIdeal = [
-  "Waterfall-only environments",
-  "Purely visual/marketing design",
-  "No user access or research budget",
-  "Design as order-taking"
+const lookingFor = [
+  "A real seat at the product table",
+  "Access to users and research",
+  "Teams that ship, then refine",
+  "Design as strategic partner"
 ];
 ---
 <section id="fit" class="py-24 px-6 md:px-10 bg-gradient-to-b from-[var(--color-bg-warm)] to-[var(--color-bg)]">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="font-display text-[clamp(2.2rem,5vw,3.2rem)] font-normal mb-4 heading-wipe">Is This a Good Fit?</h2>
     <p class="text-lg text-[var(--color-text-secondary)] mb-14 reveal">
-      Transparent about where I excel and where I might not be the best match.
+      Transparent about where I thrive — and what I look for in my next team.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-left reveal">
@@ -60,16 +60,16 @@ const notIdeal = [
         </ul>
       </div>
 
-      <!-- Not Ideal -->
+      <!-- What I'm Looking For -->
       <div class="stagger-item bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 card-hover">
         <div class="flex items-center gap-2.5 mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-          <h3 class="text-lg font-bold text-[var(--color-text-secondary)]">Not Ideal</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <h3 class="text-lg font-bold">What I'm Looking For</h3>
         </div>
         <ul class="space-y-3.5">
-          {notIdeal.map(item => (
-            <li class="flex gap-3 text-[0.95rem] text-[var(--color-text-secondary)]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-1 flex-shrink-0"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          {lookingFor.map(item => (
+            <li class="flex gap-3 text-[0.95rem] text-[var(--color-text)]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
               {item}
             </li>
           ))}
