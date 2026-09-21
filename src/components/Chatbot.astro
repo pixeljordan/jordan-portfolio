@@ -109,6 +109,19 @@ const responses = {
     "Outside of design? I speak at events and mentor young designers — paying it forward matters to me. On the personal side, I'm the self-appointed team mom for all of my kids' sports teams (yes, all of them). I volunteer, I show up, I bring the snacks. And right now I'm teaching myself to cross stitch, which is basically pixel art with thread. Turns out patience in design translates pretty well to tiny x's on fabric.",
   ],
 
+  resume: [
+    "Yes! You can grab it from the download icon in the nav bar, top right. Or if it's easier, just email me at schonegg.jordan@gmail.com and I'll send it straight over.",
+  ],
+
+  thanks: [
+    "Anytime! If anything else comes to mind, I'm right here — or reach out directly at schonegg.jordan@gmail.com.",
+    "Of course — glad it was useful. Feel free to keep digging through the projects above, or just email me at schonegg.jordan@gmail.com.",
+  ],
+
+  greetingBye: [
+    "Thanks for stopping by! If you want to keep the conversation going, email me at schonegg.jordan@gmail.com — I'd love to talk further.",
+  ],
+
   mentoring: [
     "Mentoring is one of the things I'm most passionate about outside of my day job. I regularly speak at design events and work one-on-one with early-career designers. Watching someone go from unsure to unstoppable? That's the best feeling. Design changed my life — I want to help it change someone else's too.",
   ],
@@ -122,20 +135,23 @@ const responses = {
 function classifyQuestion(input) {
   const q = input.toLowerCase();
 
+  if (/^(bye|goodbye|see ya|see you|later|gotta go|talk (soon|later))/.test(q)) return 'greetingBye';
+  if (/^(thanks|thank you|thx|appreciate it|cheers)/.test(q)) return 'thanks';
   if (/^(hi|hey|hello|sup|yo|what'?s up|howdy)/.test(q)) return 'greeting';
-  if (/what (do you|kind|type).*(design|build|create|make|work)/.test(q) || /your work|portfolio|projects/.test(q)) return 'whatYouDesign';
-  if (/process|workflow|how do you (work|design|approach)|methodology/.test(q)) return 'process';
-  if (/agent.?first|ai.?(first|native)|machine|agent/.test(q)) return 'agentFirst';
-  if (/available|hiring|open to|looking|status|taking on/.test(q)) return 'available';
-  if (/experience|background|career|history|where.*(work|been)|resume/.test(q)) return 'experience';
+  if (/resume|cv|c\.v\.|one.?pager/.test(q)) return 'resume';
+  if (/what (do you|kind|type).*(design|build|create|make|work)|your (work|projects|portfolio)|(what'?s|what is) in (your |the )?portfolio/.test(q)) return 'whatYouDesign';
+  if (/process|workflow|how do you (work|design|approach)|methodology|how do you (get|go) (started|from)/.test(q)) return 'process';
+  if (/agent.?first|ai.?(first|native)|machine|\bagent(s)?\b/.test(q)) return 'agentFirst';
+  if (/available|hiring|open to|looking for (a |new )?(role|job|work|opportunit)|status|taking on|are you (working|employed)/.test(q)) return 'available';
+  if (/experience|background|career|history|where.*(work|been)|previous (role|job|company)|worked (at|on)/.test(q)) return 'experience';
   if (/tool|figma|sketch|software|tech stack|prototype/.test(q)) return 'tools';
   if (/philosophy|principles?|values?|believe|approach to design/.test(q)) return 'philosophy';
   if (/(good )?fit|team|culture|what kind of (team|company)|where.*thrive/.test(q)) return 'teamFit';
-  if (/why.*(hire|pick|choose)|what makes you|stand out|different/.test(q)) return 'whyHire';
-  if (/salary|comp|compensation|pay|rate|money/.test(q)) return 'salary';
-  if (/remote|hybrid|office|location|where.*(based|located)/.test(q)) return 'remote';
+  if (/why.*(hire|pick|choose)|what makes you|stand out|different|what'?s special/.test(q)) return 'whyHire';
+  if (/salary|comp|compensation|pay|rate|money|how much/.test(q)) return 'salary';
+  if (/remote|hybrid|office|location|where.*(based|located|live)/.test(q)) return 'remote';
   if (/mentor|speak|speaking|engagement|teach|coaching|give back|community/.test(q)) return 'mentoring';
-  if (/spare time|free time|outside.*(work|design)|hobbi|personal|fun|for fun|weekends?|off.?hours|life outside|do for fun|interests?/.test(q)) return 'outsideWork';
+  if (/spare time|free time|outside.*(work|design)|hobbi|personal|\bfun\b|for fun|weekends?|off.?hours|life outside|do for fun|interests?/.test(q)) return 'outsideWork';
 
   return 'fallback';
 }
