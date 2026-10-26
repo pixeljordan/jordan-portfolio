@@ -15,7 +15,7 @@
         <div class="font-semibold text-sm text-[var(--color-text)]">Jordan Schonegg</div>
         <div class="text-xs text-[var(--color-accent)] flex items-center gap-1.5">
           <span class="w-1.5 h-1.5 bg-[var(--color-accent)] rounded-full status-pulse"></span>
-          Usually responds instantly
+          AI version of me · answers from my work
         </div>
       </div>
       <button id="chat-close" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[var(--color-bg-warm)] transition-colors cursor-pointer border-none bg-transparent">
@@ -29,7 +29,7 @@
       <div class="flex gap-3">
         <img src="/images/avatar-face.png" alt="Jordan" class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1" />
         <div class="bg-[var(--color-bg-warm)] rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%]">
-          <p class="text-sm text-[var(--color-text)] leading-relaxed">Hey! I'm Jordan — thanks for stopping by. Ask me anything about my design experience, process, or what I'm looking for next. I don't do generic — so neither will my answers.</p>
+          <p class="text-sm text-[var(--color-text)] leading-relaxed">Hey! I'm Jordan — thanks for stopping by. This is an AI version of me, trained on my case studies and resume. Ask about my work, process, or what I'm looking for next. If it doesn't know, it'll say so — and the real me reads email.</p>
         </div>
       </div>
 
@@ -78,7 +78,7 @@ const responses = {
   ],
 
   experience: [
-    "I've spent the last several years leading design for a mortgage fintech company — taking it from 'design as afterthought' to 'design at the table from Day 1.' I've shipped AI-powered loan review platforms, redesigned pre-approval flows that cut drop-off by 34%, and built a design team from scratch. Before that, I was the first design hire at a fintech startup where I learned that speed creates learning. The more you ship, the better your judgment gets.",
+    "Most recently I was a Senior Product Designer at Xpanse (2024–2026), where I took a multi-tenant fintech platform from concept to production in under 6 months and drove a 30% lift in client adoption — and helped move design from afterthought to at-the-table-from-Day-1. Before that I was a UX/UI designer at Moder (2022–2024), where I rebuilt the navigation (40% faster task completion) and built the design system from scratch. That's where I learned that speed creates learning.",
   ],
 
   tools: [
@@ -161,6 +161,7 @@ function getResponse(category) {
   return options[Math.floor(Math.random() * options.length)];
 }
 
+// Returns the <p> so streamed replies can be appended to it.
 function addMessage(text, isUser) {
   const container = document.getElementById('chat-messages');
   const wrapper = document.createElement('div');
@@ -169,15 +170,18 @@ function addMessage(text, isUser) {
   if (isUser) {
     wrapper.innerHTML = `
       <div class="bg-[var(--color-accent)] text-white rounded-2xl rounded-tr-sm px-4 py-3 max-w-[85%]">
-        <p class="text-sm leading-relaxed">${text}</p>
+        <p class="text-sm leading-relaxed whitespace-pre-line"></p>
       </div>`;
   } else {
     wrapper.innerHTML = `
       <img src="/images/avatar-face.png" alt="Jordan" class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1" />
       <div class="bg-[var(--color-bg-warm)] rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%]">
-        <p class="text-sm text-[var(--color-text)] leading-relaxed">${text}</p>
+        <p class="text-sm text-[var(--color-text)] leading-relaxed whitespace-pre-line"></p>
       </div>`;
   }
+  // textContent, never innerHTML: visitor input and model output are untrusted
+  const p = wrapper.querySelector('p');
+  p.textContent = text;
 
   // Animate in
   wrapper.style.opacity = '0';
@@ -190,6 +194,7 @@ function addMessage(text, isUser) {
   });
 
   container.scrollTop = container.scrollHeight;
+  return p;
 }
 
 function showTyping() {
@@ -214,24 +219,59 @@ function removeTyping() {
   document.getElementById('typing-indicator')?.remove();
 }
 
-function handleSubmit(text) {
-  if (!text.trim()) return;
+// Conversation sent to /api/chat; the canned answers above are the offline fallback.
+const history = [];
+let busy = false;
+
+async function handleSubmit(text) {
+  if (!text.trim() || busy) return;
+  busy = true;
 
   // Remove quick prompts after first message
   document.querySelectorAll('.chat-prompt').forEach(el => el.closest('.flex.flex-wrap')?.remove());
 
   addMessage(text, true);
-
-  const category = classifyQuestion(text);
-
+  history.push({ role: 'user', content: text });
   showTyping();
 
-  // Simulate natural typing delay
-  const delay = 800 + Math.random() * 1200;
-  setTimeout(() => {
+  let reply = '';
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: history }),
+    });
+    if (!res.ok || !res.body) throw new Error(`Chat unavailable (${res.status})`);
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    const container = document.getElementById('chat-messages');
+    let bubble = null;
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      reply += decoder.decode(value, { stream: true });
+      if (!bubble && reply.trim()) {
+        removeTyping();
+        bubble = addMessage(reply, false);
+      } else if (bubble) {
+        bubble.textContent = reply;
+        container.scrollTop = container.scrollHeight;
+      }
+    }
+    if (!reply.trim()) throw new Error('Empty reply');
+  } catch (err) {
+    console.warn(err);
     removeTyping();
-    addMessage(getResponse(category), false);
-  }, delay);
+    // Keep a partial streamed reply; otherwise fall back to the canned answers
+    if (!reply.trim()) {
+      reply = getResponse(classifyQuestion(text));
+      addMessage(reply, false);
+    }
+  }
+
+  history.push({ role: 'assistant', content: reply });
+  busy = false;
 }
 
 // Initialize
