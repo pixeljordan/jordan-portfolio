@@ -3,19 +3,26 @@ const projects = [
   {
     tag: "AI Design",
     title: "AI-Powered Loan Review Platform",
-    description: "Designed an AI-powered data validation platform that cut mortgage loan review time by 63%, serving 150+ daily active users with smart flagging and confidence scoring.",
+    description: "An AI-powered data validation platform for mortgage loan reviewers who were juggling 3–4 tools, built on smart flagging and confidence scoring.",
     image: "/images/ai-loan-platform.png",
     device: "desktop",
     link: "/case-study/ai-loan-review",
+    metrics: [
+      { value: "63%", label: "faster mortgage loan review" },
+      { value: "150+", label: "daily active users" },
+    ],
     reverse: false
   },
   {
     tag: "Product",
     title: "Scaling for Growth: Multi-Tenant Order Management Platform",
-    description: "A strategic product design case study showcasing rapid iteration, collaborative discovery, and scalable architecture that grew from 25-50 monthly orders to over 18,000.",
+    description: "Rapid iteration, collaborative discovery, and a scalable multi-tenant architecture that kept up as order volume grew.",
     image: "/images/order-management.png",
     device: "desktop",
     link: "/case-study/order-management",
+    metrics: [
+      { value: "18,000+", label: "monthly orders, up from 25–50" },
+    ],
     reverse: true
   },
   {
@@ -25,6 +32,10 @@ const projects = [
     image: "/images/ai-chatbot.png",
     device: "desktop",
     link: "/case-study/ai-chatbot",
+    metrics: [
+      { value: "3", label: "white-label design systems" },
+      { value: "5-day", label: "retention arc across sessions" },
+    ],
     reverse: false
   }
 ];
@@ -64,6 +75,16 @@ const projects = [
             <h3 class="font-display text-xl md:text-2xl font-normal text-[var(--color-text)] mb-3 leading-snug">
               {project.title}
             </h3>
+            {project.metrics && (
+              <dl class="flex flex-wrap gap-x-8 gap-y-4 mb-5">
+                {project.metrics.map((m) => (
+                  <div class="flex flex-col-reverse">
+                    <dt class="text-sm text-[var(--color-text-secondary)] mt-1">{m.label}</dt>
+                    <dd class="font-display text-4xl md:text-5xl leading-none text-[var(--color-text)]">{m.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
             <p class="text-[var(--color-text-secondary)] text-sm leading-relaxed mb-5">
               {project.description}
             </p>

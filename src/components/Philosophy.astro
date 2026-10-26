@@ -3,84 +3,49 @@ const cards = [
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`,
     title: "Agent-First Design",
-    description: "In 2026, AI agents are your first users. I design interfaces legible to machines AND humans: semantic structure, API-first architecture, graceful human-agent handoffs."
+    description: "AI agents are becoming your first users. I design interfaces legible to machines and humans alike: semantic structure, API-first architecture, graceful human-agent handoffs.",
+    proof: "Seen in: Invisible AI, with a graceful AI-to-human handoff",
+    link: "/case-study/ai-chatbot"
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
     title: "Solutions-First Process",
-    description: "Build fast, learn fast. 48-hour prototype windows and 2-week design cycles. Ship solutions, then refine based on real user behavior."
+    description: "Build fast, learn fast. 48-hour prototype windows and 2-week design cycles. Ship solutions, then refine based on real user behavior.",
+    proof: "At Xpanse: prototypes in front of real users within 48 hours"
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
     title: "Product Trio+ Framework",
-    description: "Design, Engineering, and Product working in continuous discovery, not sequential handoffs. Collaborative problem-solving from day one."
+    description: "Design, Engineering, and Product working in continuous discovery, not sequential handoffs. Collaborative problem-solving from day one.",
+    proof: "At Moder: founding designer in a product trio; design backlog cut 30%"
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
-    title: "Data-Driven Decisions",
-    description: "Every design decision backed by user research, analytics, and measurable business outcomes. No gut-feeling design."
+    title: "Evidence Over Opinion",
+    description: "Design decisions grounded in user research, analytics, and measurable business outcomes, so the debate is about what users do, not what we prefer.",
+    proof: "At Xpanse: 50+ interviews led to pivots that lifted satisfaction 20%"
   }
 ];
 ---
 <section id="philosophy" class="py-24 px-6 md:px-10 bg-[var(--color-bg)]" aria-label="Design Philosophy">
   <div class="max-w-6xl mx-auto">
+    <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-accent)] mb-3 block reveal">How I Work</span>
     <h2 class="font-display text-[clamp(2.2rem,5vw,3.2rem)] font-normal mb-3 heading-wipe">My Design Philosophy</h2>
-    <p class="text-lg text-[var(--color-text-secondary)] mb-10 reveal">
-      Principles that guide how I approach every project and challenge.
+    <p class="text-lg text-[var(--color-text-secondary)] mb-12 reveal">
+      Four principles, and where each one showed up in real work.
     </p>
 
-    <!-- Process Strip -->
-    <div class="reveal mb-14">
-      <div class="flex items-center justify-between bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-6 overflow-x-auto gap-2">
-        <div class="flex flex-col items-center text-center min-w-[80px]">
-          <div class="w-10 h-10 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-sm font-bold mb-2">1</div>
-          <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text)]">Discover</span>
-          <span class="text-[10px] text-[var(--color-text-muted)] mt-0.5">Research & Listen</span>
-        </div>
-        <div class="h-px bg-[var(--color-border)] flex-1 min-w-[20px]"></div>
-        <div class="flex flex-col items-center text-center min-w-[80px]">
-          <div class="w-10 h-10 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-sm font-bold mb-2">2</div>
-          <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text)]">Define</span>
-          <span class="text-[10px] text-[var(--color-text-muted)] mt-0.5">Frame Problems</span>
-        </div>
-        <div class="h-px bg-[var(--color-border)] flex-1 min-w-[20px]"></div>
-        <div class="flex flex-col items-center text-center min-w-[80px]">
-          <div class="w-10 h-10 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-sm font-bold mb-2">3</div>
-          <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text)]">Design</span>
-          <span class="text-[10px] text-[var(--color-text-muted)] mt-0.5">Prototype Fast</span>
-        </div>
-        <div class="h-px bg-[var(--color-border)] flex-1 min-w-[20px]"></div>
-        <div class="flex flex-col items-center text-center min-w-[80px]">
-          <div class="w-10 h-10 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-sm font-bold mb-2">4</div>
-          <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text)]">Deliver</span>
-          <span class="text-[10px] text-[var(--color-text-muted)] mt-0.5">Ship & Handoff</span>
-        </div>
-        <div class="h-px bg-[var(--color-border)] flex-1 min-w-[20px]"></div>
-        <div class="flex flex-col items-center text-center min-w-[80px]">
-          <div class="w-10 h-10 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-sm font-bold mb-2">5</div>
-          <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text)]">Measure</span>
-          <span class="text-[10px] text-[var(--color-text-muted)] mt-0.5">Learn & Iterate</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Row 1 -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 reveal">
-      {cards.slice(0, 2).map((card) => (
-        <div class="stagger-item bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-8 card-hover">
-          <div class="w-12 h-12 flex items-center justify-center text-[var(--color-accent)] mb-6" set:html={card.icon} />
-          <h3 class="text-xl font-semibold mb-3">{card.title}</h3>
-          <p class="text-[var(--color-text-secondary)] text-base leading-relaxed">{card.description}</p>
-        </div>
-      ))}
-    </div>
-    <!-- Row 2 -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
-      {cards.slice(2, 4).map((card) => (
-        <div class="stagger-item bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-8 card-hover">
+      {cards.map((card) => (
+        <div class="stagger-item flex flex-col bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-8 card-hover">
           <div class="w-12 h-12 flex items-center justify-center text-[var(--color-accent)] mb-6" set:html={card.icon} />
           <h3 class="text-xl font-semibold mb-3">{card.title}</h3>
-          <p class="text-[var(--color-text-secondary)] text-base leading-relaxed">{card.description}</p>
+          <p class="text-[var(--color-text-secondary)] text-base leading-relaxed mb-6">{card.description}</p>
+          <p class="mt-auto pt-5 border-t border-[var(--color-border)] text-sm text-[var(--color-text)]">
+            {card.link ? (
+              <a href={card.link} class="no-underline text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{card.proof} →</a>
+            ) : card.proof}
+          </p>
         </div>
       ))}
     </div>

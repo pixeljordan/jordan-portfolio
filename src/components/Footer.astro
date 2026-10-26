@@ -1,27 +1,44 @@
 ---
+const links = [
+  { label: "Download résumé", href: "/Jordan_Schonegg_Senior_Designer_Resume.docx", download: true },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/jordan-schonegg", external: true },
+];
 ---
-<footer id="contact" class="pt-10 pb-20 px-6 md:px-10 bg-[var(--color-bg)] relative overflow-hidden">
-  <!-- Subtle gradient -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(220,180,240,0.08),transparent_70%)] pointer-events-none"></div>
+<footer id="contact" class="pt-10 pb-12 px-6 md:px-10 bg-[var(--color-bg)]">
+  <div class="max-w-6xl mx-auto bg-[var(--color-text)] text-white rounded-3xl px-8 py-16 md:px-16 md:py-20 relative overflow-hidden reveal">
+    <!-- Same dot grid as the hero, inverted -->
+    <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px); background-size: 24px 24px; mask-image: radial-gradient(ellipse 50% 70% at 90% 50%, #000 0%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 50% 70% at 90% 50%, #000 0%, transparent 75%);"></div>
 
-  <div class="max-w-4xl mx-auto text-center relative z-10">
-    <h2 class="font-display text-[clamp(2.2rem,5vw,3.2rem)] font-normal text-[var(--color-text-secondary)] mb-4 heading-wipe">Get in Touch</h2>
-    <p class="text-lg text-[var(--color-text-muted)] mb-10 reveal">
-      Open to collaborating, speaking engagements, and new opportunities. Let's connect.
-    </p>
+    <div class="relative max-w-4xl">
+      <p class="text-xs font-semibold uppercase tracking-widest text-white/50 mb-5">Open to senior product design roles</p>
+      <h2 class="font-display text-[clamp(2.4rem,5.5vw,4.2rem)] font-normal leading-[1.05] mb-6">
+        Hiring a product designer<br class="hidden md:inline" /> for fintech or AI?
+      </h2>
+      <p class="text-lg text-white/70 max-w-xl mb-10">
+        I'd love to hear what you're building. Email is the fastest way to reach me.
+      </p>
 
-    <div class="reveal">
-      <button onclick="copyEmail()" class="inline-flex items-center gap-2 text-[var(--color-accent)] text-lg font-medium hover:underline cursor-pointer bg-transparent border-none group transition-all">
-        schonegg.jordan@gmail.com
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:opacity-100 transition-opacity" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-      </button>
-      <p class="text-xs text-[var(--color-text-muted)] mt-2">Click to copy</p>
+      <div class="flex flex-wrap items-center gap-4 mb-10">
+        <a href="mailto:schonegg.jordan@gmail.com" class="inline-flex items-center gap-2 bg-white text-[var(--color-text)] rounded-full px-6 py-3.5 font-semibold text-sm no-underline hover:bg-white/90 transition-colors">
+          Email me
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <button onclick="copyEmail()" class="inline-flex items-center gap-2 border border-white/25 rounded-full px-6 py-3.5 text-sm font-medium text-white bg-transparent cursor-pointer hover:border-white/60 transition-colors">
+          Copy schonegg.jordan@gmail.com
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+        </button>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
+        {links.map((l) => (
+          <a href={l.href} download={l.download} target={l.external ? "_blank" : undefined} rel={l.external ? "noopener" : undefined} class="text-white/70 hover:text-white no-underline underline-offset-4 hover:underline transition-colors">{l.label}</a>
+        ))}
+        <button onclick="openChat()" class="text-white/70 hover:text-white bg-transparent border-none p-0 cursor-pointer underline-offset-4 hover:underline transition-colors text-sm">Ask the AI version of me</button>
+      </div>
     </div>
   </div>
 
-  <div class="max-w-6xl mx-auto border-t border-[var(--color-border)] mt-16 pt-8 text-center">
-    <p class="text-[var(--color-text-muted)] text-sm">
-      &copy; 2026 Jordan Schonegg. Crafted with intention.
-    </p>
-  </div>
+  <p class="max-w-6xl mx-auto mt-8 text-center text-[var(--color-text-muted)] text-sm">
+    &copy; 2026 Jordan Schonegg
+  </p>
 </footer>

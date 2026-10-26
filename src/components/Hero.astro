@@ -36,10 +36,9 @@ const proof = [
       </p>
       <dl class="grid grid-cols-3 border-t border-[var(--color-border)] pt-5">
         {proof.map((s, i) => (
-          <div class={i > 0 ? "pl-5 border-l border-[var(--color-border)]" : "pr-5"}>
-            <dt class="sr-only">{s.label}</dt>
-            <dd class="font-display text-3xl md:text-4xl leading-none mb-2">{s.value}</dd>
-            <dd class="text-sm text-[var(--color-text-secondary)] leading-snug">{s.label}</dd>
+          <div class={`flex flex-col-reverse justify-end ${i > 0 ? "pl-5 border-l border-[var(--color-border)]" : "pr-5"}`}>
+            <dt class="text-sm text-[var(--color-text-secondary)] leading-snug mt-2">{s.label}</dt>
+            <dd class="font-display text-3xl md:text-4xl leading-none">{s.value}</dd>
           </div>
         ))}
       </dl>
