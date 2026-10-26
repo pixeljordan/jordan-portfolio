@@ -1,12 +1,19 @@
 ---
+// Stacked case-study previews on the right side of the hero (desktop only)
+const previews = [
+  { image: "/images/order-management.png", alt: "Order management platform", link: "/case-study/order-management", pos: "top-[4%] left-0 w-[78%] -rotate-6 z-10", delay: "0.5s" },
+  { image: "/images/ai-loan-platform.png", alt: "AI-powered loan review platform", link: "/case-study/ai-loan-review", pos: "top-[30%] right-0 w-[80%] rotate-3 z-20", delay: "0.65s" },
+  { image: "/images/chatbot-landing-hero.png", alt: "Conversational AI mortgage prequalification", link: "/case-study/ai-chatbot", pos: "top-[52%] left-[10%] w-[44%] -rotate-2 z-30", delay: "0.8s" },
+];
 ---
 <section class="min-h-screen flex flex-col justify-center px-6 md:px-10 pt-24 pb-16 relative bg-[var(--color-bg)] overflow-hidden">
   <!-- Vivid pink/purple/peach gradient blob — large, saturated, matching Lovable -->
   <div class="absolute top-0 right-[-10%] w-[900px] h-[900px] pointer-events-none" style="background: radial-gradient(ellipse at 50% 50%, rgba(215,165,235,0.55) 0%, rgba(240,185,210,0.45) 20%, rgba(245,200,185,0.35) 40%, rgba(230,200,240,0.2) 55%, transparent 70%); filter: blur(40px);"></div>
 
-  <div class="relative z-10 max-w-4xl">
+  <div class="relative z-10 w-full max-w-7xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-8 items-center">
+  <div>
     <!-- Title -->
-    <h1 class="font-display text-[clamp(4.5rem,13vw,9rem)] font-medium tracking-[-0.025em] leading-[1] mb-8">
+    <h1 class="font-display text-[clamp(4.5rem,13vw,9rem)] lg:text-[clamp(5rem,8.5vw,8.5rem)] font-medium tracking-[-0.025em] leading-[1] mb-8">
       <span class="hero-word" style="animation-delay: 0s">product </span>
       <span class="hero-word" style="animation-delay: 0.15s">designer</span>
     </h1>
@@ -35,5 +42,15 @@
         </div>
       </button>
     </div>
+  </div>
+
+  <!-- Stacked work previews -->
+  <div class="hidden lg:block relative aspect-[1/1] w-full">
+    {previews.map((p) => (
+      <a href={p.link} class={`hero-preview absolute ${p.pos}`} style={`animation-delay: ${p.delay}`} aria-label={p.alt}>
+        <img src={p.image} alt={p.alt} class="w-full h-auto block rounded-xl border border-[var(--color-border)] bg-white shadow-[0_24px_60px_-20px_rgba(40,20,60,0.35)] transition-transform duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02]" loading="eager" />
+      </a>
+    ))}
+  </div>
   </div>
 </section>
