@@ -1,10 +1,13 @@
 ---
 // Stacked case-study previews on the right side of the hero (desktop only)
 const previews = [
-  { image: "/images/order-management.png", alt: "Order management platform", link: "/case-study/order-management", pos: "top-[4%] left-0 w-[78%] -rotate-6 z-10", delay: "0.3s" },
-  { image: "/images/ai-loan-platform.png", alt: "AI-powered loan review platform", link: "/case-study/ai-loan-review", pos: "top-[30%] right-0 w-[80%] rotate-3 z-20", delay: "0.4s" },
-  { image: "/images/chatbot-landing-hero.png", alt: "Conversational AI mortgage prequalification", link: "/case-study/ai-chatbot", pos: "top-[52%] left-[10%] w-[44%] -rotate-2 z-30", delay: "0.5s" },
+  { image: "/images/order-management.png", alt: "Order management platform", link: "/case-study/order-management", pos: "top-[4%] left-0 w-[78%] -rotate-6 z-10", delay: "0.3s", label: "Order Management", metric: "18,000+ monthly orders" },
+  { image: "/images/ai-loan-platform.png", alt: "AI-powered loan review platform", link: "/case-study/ai-loan-review", pos: "top-[30%] right-0 w-[80%] rotate-3 z-20", delay: "0.4s", label: "AI Loan Review", metric: "63% faster reviews" },
+  { image: "/images/chatbot-landing-hero.png", alt: "Conversational AI mortgage prequalification", link: "/case-study/ai-chatbot", pos: "top-[52%] left-[10%] w-[44%] -rotate-2 z-30", delay: "0.5s", label: "Invisible AI", metric: "3 white-label systems" },
 ];
+
+// Phone order: strongest result first
+const strip = [previews[1], previews[0], previews[2]];
 
 const proof = [
   { value: "<6 mo", label: "Fintech platform, concept to production" },
@@ -64,10 +67,22 @@ const proof = [
     </div>
   </div>
 
-  <!-- Single work preview below lg, so phones see real work near the fold -->
-  <a href={previews[1].link} class="lg:hidden block hero-tags -mt-2" aria-label={previews[1].alt}>
-    <img src={previews[1].image} alt={previews[1].alt} class="w-full h-auto block rounded-xl border border-[var(--color-border)] bg-white shadow-[0_24px_60px_-20px_rgba(40,20,60,0.35)] rotate-1" loading="eager" />
-  </a>
+  <!-- Swipeable work strip below lg, so phones see all three projects near the fold -->
+  <div class="lg:hidden hero-tags min-w-0 -mx-6 md:-mx-10 -mt-2">
+    <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 md:scroll-px-10 px-6 md:px-10 pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" aria-label="Case studies">
+      {strip.map((p) => (
+        <a href={p.link} class="snap-start shrink-0 w-[78%] sm:w-[46%] no-underline text-[var(--color-text)]" aria-label={p.alt}>
+          <span class="block aspect-[4/3] rounded-xl overflow-hidden border border-[var(--color-border)] bg-white shadow-[0_16px_40px_-20px_rgba(40,20,60,0.35)]">
+            <img src={p.image} alt="" class="w-full h-full object-cover object-left-top" loading="eager" />
+          </span>
+          <span class="flex items-baseline justify-between gap-3 mt-3">
+            <span class="text-sm font-semibold">{p.label}</span>
+            <span class="text-xs text-[var(--color-text-secondary)]">{p.metric}</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
 
   <!-- Stacked work previews -->
   <div class="hidden lg:block relative aspect-[1/1] w-full">

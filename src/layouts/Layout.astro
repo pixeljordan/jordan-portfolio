@@ -9,7 +9,7 @@ interface Props {
 const {
   title = "Jordan Schonegg — Senior Product Designer",
   description = "Jordan Schonegg — Senior Product Designer specializing in complex systems, regulated industries, and AI-native products.",
-  image = "/images/avatar-face.png",
+  image = "/og/home.png",
 } = Astro.props;
 
 const SITE_URL = "https://jordanschonegg.vercel.app";
@@ -23,7 +23,7 @@ const personSchema = {
   jobTitle: "Senior Product Designer",
   description,
   url: SITE_URL,
-  image: absoluteImage,
+  image: new URL("/images/avatar-face.png", SITE_URL).toString(),
   email: "mailto:schonegg.jordan@gmail.com",
   sameAs: [
     "https://www.linkedin.com/in/jordan-schonegg",
