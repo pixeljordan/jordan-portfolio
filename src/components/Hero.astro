@@ -1,9 +1,9 @@
 ---
 // Stacked case-study previews on the right side of the hero (desktop only)
 const previews = [
-  { image: "/images/order-management.png", alt: "Order management platform", link: "/case-study/order-management", pos: "top-[4%] left-0 w-[78%] -rotate-6 z-10", delay: "0.5s" },
-  { image: "/images/ai-loan-platform.png", alt: "AI-powered loan review platform", link: "/case-study/ai-loan-review", pos: "top-[30%] right-0 w-[80%] rotate-3 z-20", delay: "0.65s" },
-  { image: "/images/chatbot-landing-hero.png", alt: "Conversational AI mortgage prequalification", link: "/case-study/ai-chatbot", pos: "top-[52%] left-[10%] w-[44%] -rotate-2 z-30", delay: "0.8s" },
+  { image: "/images/order-management.png", alt: "Order management platform", link: "/case-study/order-management", pos: "top-[4%] left-0 w-[78%] -rotate-6 z-10", delay: "0.3s" },
+  { image: "/images/ai-loan-platform.png", alt: "AI-powered loan review platform", link: "/case-study/ai-loan-review", pos: "top-[30%] right-0 w-[80%] rotate-3 z-20", delay: "0.4s" },
+  { image: "/images/chatbot-landing-hero.png", alt: "Conversational AI mortgage prequalification", link: "/case-study/ai-chatbot", pos: "top-[52%] left-[10%] w-[44%] -rotate-2 z-30", delay: "0.5s" },
 ];
 
 const proof = [
@@ -12,25 +12,25 @@ const proof = [
   { value: "50+", label: "User interviews and usability sessions" },
 ];
 ---
-<section class="min-h-screen flex flex-col justify-center px-6 md:px-10 pt-24 pb-16 relative bg-[var(--color-bg)] overflow-hidden">
+<section class="min-h-screen flex flex-col justify-center px-6 md:px-10 pt-20 md:pt-24 pb-16 relative bg-[var(--color-bg)] overflow-hidden">
   <!-- Quiet dot grid behind the work previews, fading out toward the text -->
   <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(rgba(26,26,26,0.14) 1px, transparent 1px); background-size: 24px 24px; mask-image: radial-gradient(ellipse 55% 60% at 75% 50%, #000 0%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 55% 60% at 75% 50%, #000 0%, transparent 75%);"></div>
 
   <div class="relative z-10 w-full max-w-7xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-8 items-center">
   <div>
     <!-- Title -->
-    <h1 class="font-display text-[clamp(4.5rem,13vw,9rem)] lg:text-[clamp(5rem,8.5vw,8.5rem)] font-medium tracking-[-0.025em] leading-[1] mb-8">
+    <h1 class="font-display text-[clamp(3.5rem,15vw,9rem)] lg:text-[clamp(5rem,8.5vw,8.5rem)] font-medium tracking-[-0.025em] leading-[1] mb-6 md:mb-8">
       <span class="hero-word" style="animation-delay: 0s">product </span>
-      <span class="hero-word" style="animation-delay: 0.15s">designer</span>
+      <span class="hero-word" style="animation-delay: 0.08s">designer</span>
     </h1>
 
     <!-- Description — slightly larger -->
-    <p class="text-xl md:text-2xl text-[var(--color-text-secondary)] max-w-xl mb-10 hero-subtitle leading-relaxed">
+    <p class="text-lg md:text-2xl text-[var(--color-text-secondary)] max-w-xl mb-8 md:mb-10 hero-subtitle leading-relaxed">
       I design where the stakes are high and the systems are complex. Fintech, mortgage, AI-native products — built for the humans using them today and the agents navigating them tomorrow.
     </p>
 
     <!-- Proof strip: credentials and outcomes from the resume -->
-    <div class="max-w-xl mb-12 hero-description">
+    <div class="max-w-xl mb-8 md:mb-12 hero-description">
       <p class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-muted)] mb-4">
         Senior Product Designer · Xpanse, 2024–2026
       </p>
@@ -63,6 +63,11 @@ const proof = [
       </button>
     </div>
   </div>
+
+  <!-- Single work preview below lg, so phones see real work near the fold -->
+  <a href={previews[1].link} class="lg:hidden block hero-tags -mt-2" aria-label={previews[1].alt}>
+    <img src={previews[1].image} alt={previews[1].alt} class="w-full h-auto block rounded-xl border border-[var(--color-border)] bg-white shadow-[0_24px_60px_-20px_rgba(40,20,60,0.35)] rotate-1" loading="eager" />
+  </a>
 
   <!-- Stacked work previews -->
   <div class="hidden lg:block relative aspect-[1/1] w-full">
