@@ -1,27 +1,39 @@
 ---
+// Mirrors the resume (Jordan_Schonegg_Resume_FDUX). Dates are left off until the resume has them.
+const moder = [
+  "Designed an AI-powered loan review platform that reduced review time by 63%, defining human-in-the-loop workflows for underwriting and processing teams",
+  "Shipped a Rules Encyclopedia to production through AI-assisted design and development using Claude Code, Vercel, and GitHub",
+  "Led design for a multi-tenant platform at Xpanse, aligning product, engineering, and operations on shared workflows and tenant configuration",
+  "Conducted 21 stakeholder interviews and introduced UX scorecards to set usability baselines and prioritize roadmap decisions",
+  "Built a design system Claude skill on shadcn/ui (tokens, component patterns, conventions) and a prompt library adopted by the design team",
+  "Delivered end-to-end design for a HELOC product: service blueprint, research plan, usability test plan, annotated high-fidelity mockups, and design spec, with a full accessibility audit and remediation",
+  "Authored the PRD and problem framing for an embedded CRM within a loan origination system (LOS)",
+  "Launched Friday Show and Tell sessions to make design work visible across product and engineering",
+];
+const teaching = [
+  "Designed curriculum and assessments for diverse learners across 10 years, adapting content to different experience levels",
+  "Translated complex scientific concepts into clear, engaging learning experiences, the same skill now applied to complex enterprise and AI workflows",
+];
 ---
 <section id="experience" class="py-24 px-6 md:px-10 bg-[var(--color-bg)]">
   <div class="max-w-5xl mx-auto">
     <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-accent)] mb-3 block reveal">Experience</span>
     <h2 class="font-display text-[clamp(2rem,4vw,3rem)] font-normal mb-4 heading-wipe">Where I've Designed</h2>
     <p class="text-lg text-[var(--color-text-secondary)] max-w-2xl mb-12 reveal">
-      Each role includes the real story behind the bullet points — including what went wrong and what I learned.
+      Six years designing AI products in regulated industries, after ten years teaching science.
     </p>
 
     <!-- Role 1 -->
     <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 mb-6 card-hover reveal">
-      <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-5">
-        <div>
-          <h3 class="text-xl font-semibold">Xpanse</h3>
-          <p class="text-[var(--color-accent)] font-medium text-sm">Senior Product Designer · Remote</p>
-        </div>
-        <span class="text-sm text-[var(--color-text-muted)] mt-1 md:mt-0">Jan 2024 – Feb 2026</span>
+      <div class="mb-5">
+        <h3 class="text-xl font-semibold">Moder</h3>
+        <p class="text-[var(--color-accent)] font-medium text-sm">Senior Product Designer</p>
+        <p class="text-sm text-[var(--color-text-muted)] mt-1">Client engagements: Xpanse, Mortgage Connect, Freedom Mortgage</p>
       </div>
       <ul class="space-y-2 text-[var(--color-text-secondary)] text-[0.95rem] mb-5 list-none">
-        <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>Designed and shipped a consumer-facing multi-tenant fintech platform from concept to production in under 6 months, driving a 30% increase in client adoption</li>
-        <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>Ran 50+ user interviews and usability sessions; behavior-change design pivots lifted satisfaction scores 20%</li>
-        <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>High-fidelity prototypes with detailed design rationale cut engineering rework 25%</li>
-        <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>Established a unified visual identity across 3+ digital products, held to WCAG AA</li>
+        {moder.map((item) => (
+          <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>{item}</li>
+        ))}
       </ul>
 
       <button onclick="toggleContext(this)" class="text-sm font-medium text-[var(--color-accent)] hover:underline cursor-pointer mb-3 bg-transparent border-none">
@@ -30,10 +42,10 @@
       <div class="ai-context">
         <div class="bg-[var(--color-accent-light)] border-l-[3px] border-[var(--color-accent)] rounded-r-xl p-5 mt-2">
           <p class="text-[0.95rem] text-[var(--color-text-secondary)] leading-relaxed">
-            <strong class="text-[var(--color-text)]">The real story:</strong> I joined when design was an afterthought. Products like TaaS (Title as a Service) and our Data Validation platform had shipped without meaningful design input — and it showed. These failures taught me the most important lesson of my career: <strong class="text-[var(--color-text)]">the fastest path to a great product isn't skipping design — it's frontloading it.</strong>
+            <strong class="text-[var(--color-text)]">The real story:</strong> When I started on the Xpanse engagement, design was an afterthought. Products like TaaS (Title as a Service) and the Data Validation platform had shipped without meaningful design input — and it showed. Those failures taught me the most important lesson of my career: <strong class="text-[var(--color-text)]">the fastest path to a great product isn't skipping design — it's frontloading it.</strong>
           </p>
           <p class="text-[0.95rem] text-[var(--color-text-secondary)] leading-relaxed mt-3">
-            By the time I left, we'd transformed how we work: prototypes reached real users within 48 hours, and design was at the table from Day 1.
+            By the end, design was at the table from Day 1, and work was visible every Friday at Show and Tell.
           </p>
         </div>
       </div>
@@ -41,29 +53,15 @@
 
     <!-- Role 2 -->
     <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 card-hover reveal">
-      <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-5">
-        <div>
-          <h3 class="text-xl font-semibold">Moder</h3>
-          <p class="text-[var(--color-accent)] font-medium text-sm">UX/UI Designer · Indiana</p>
-        </div>
-        <span class="text-sm text-[var(--color-text-muted)] mt-1 md:mt-0">Nov 2022 – Jan 2024</span>
+      <div class="mb-5">
+        <h3 class="text-xl font-semibold">K-12 Schools</h3>
+        <p class="text-[var(--color-accent)] font-medium text-sm">Science Teacher · AP Biology, Life Sciences</p>
       </div>
-      <ul class="space-y-2 text-[var(--color-text-secondary)] text-[0.95rem] mb-5 list-none">
-        <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>Overhauled core navigation architecture, cutting average task completion time 40%</li>
-        <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>Built a component-based design system with 50+ elements, eliminating 50% of redundant design work</li>
-        <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>Founding designer in a cross-functional product trio; introduced a kanban workflow that cut the design backlog 30%</li>
+      <ul class="space-y-2 text-[var(--color-text-secondary)] text-[0.95rem] list-none">
+        {teaching.map((item) => (
+          <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>{item}</li>
+        ))}
       </ul>
-
-      <button onclick="toggleContext(this)" class="text-sm font-medium text-[var(--color-accent)] hover:underline cursor-pointer mb-3 bg-transparent border-none">
-        The real story →
-      </button>
-      <div class="ai-context">
-        <div class="bg-[var(--color-accent-light)] border-l-[3px] border-[var(--color-accent)] rounded-r-xl p-5 mt-2">
-          <p class="text-[0.95rem] text-[var(--color-text-secondary)] leading-relaxed">
-            <strong class="text-[var(--color-text)]">The real story:</strong> This is where I learned to move fast. No research team, no design system, just me and a lot of ambiguity. I made plenty of mistakes — shipped features nobody used, over-polished things that didn't matter. But I also learned that speed creates learning. The more I shipped, the better my judgment became.
-          </p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
