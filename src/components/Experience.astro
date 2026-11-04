@@ -1,5 +1,5 @@
 ---
-// Mirrors the resume (Jordan_Schonegg_Resume_FDUX). Dates are left off until the resume has them.
+// Mirrors the resume (Jordan_Schonegg_Resume_FDUX).
 const moder = [
   "Designed an AI-powered loan review platform that reduced review time by 63%, defining human-in-the-loop workflows for underwriting and processing teams",
   "Shipped a Rules Encyclopedia to production through AI-assisted design and development using Claude Code, Vercel, and GitHub",
@@ -9,6 +9,10 @@ const moder = [
   "Delivered end-to-end design for a HELOC product: service blueprint, research plan, usability test plan, annotated high-fidelity mockups, and design spec, with a full accessibility audit and remediation",
   "Authored the PRD and problem framing for an embedded CRM within a loan origination system (LOS)",
   "Launched Friday Show and Tell sessions to make design work visible across product and engineering",
+];
+const freelance = [
+  "Designed end-to-end web and mobile products for fintech and small-business clients while finishing my time in the classroom, covering research, journey mapping, wireframes, and Figma handoff",
+  "Audited and restructured client workflows to cut manual effort and bring consistency across engagements, the bridge from teaching into full-time product design",
 ];
 const teaching = [
   "Designed curriculum and assessments for diverse learners across 10 years, adapting content to different experience levels",
@@ -27,7 +31,7 @@ const teaching = [
     <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 mb-6 card-hover reveal">
       <div class="mb-5">
         <h3 class="text-xl font-semibold">Moder</h3>
-        <p class="text-[var(--color-accent)] font-medium text-sm">Senior Product Designer</p>
+        <p class="text-[var(--color-accent)] font-medium text-sm">Senior Product Designer · Nov 2022 – Present</p>
         <p class="text-sm text-[var(--color-text-muted)] mt-1">Client engagements: Xpanse, Mortgage Connect, Freedom Mortgage</p>
       </div>
       <ul class="space-y-2 text-[var(--color-text-secondary)] text-[0.95rem] mb-5 list-none">
@@ -52,10 +56,23 @@ const teaching = [
     </div>
 
     <!-- Role 2 -->
+    <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 mb-6 card-hover reveal">
+      <div class="mb-5">
+        <h3 class="text-xl font-semibold">JS Consulting</h3>
+        <p class="text-[var(--color-accent)] font-medium text-sm">Freelance UX Consultant · 2020 – 2022</p>
+      </div>
+      <ul class="space-y-2 text-[var(--color-text-secondary)] text-[0.95rem] list-none">
+        {freelance.map((item) => (
+          <li class="flex gap-3"><span class="text-[var(--color-accent)] mt-1">•</span>{item}</li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Role 3 -->
     <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-7 card-hover reveal">
       <div class="mb-5">
         <h3 class="text-xl font-semibold">K-12 Schools</h3>
-        <p class="text-[var(--color-accent)] font-medium text-sm">Science Teacher · AP Biology, Life Sciences</p>
+        <p class="text-[var(--color-accent)] font-medium text-sm">Science Teacher · AP Biology, Life Sciences · 2012 – 2022</p>
       </div>
       <ul class="space-y-2 text-[var(--color-text-secondary)] text-[0.95rem] list-none">
         {teaching.map((item) => (

@@ -6,14 +6,14 @@ will decline to make up.
 
 ## Snapshot
 - Senior Product Designer. AI product design, fintech, mortgage and lending, EdTech, B2B SaaS, multi-tenant platforms.
-- 6+ years designing AI-powered products in regulated industries, after 10 years as a K-12 science educator.
+- 6+ years in product design: freelance UX consulting from 2020, then Moder since November 2022. Before that, 10 years (2012–2022) as a K-12 science educator; the freelance work overlapped the last two years of teaching.
 - Specializes in human-in-the-loop workflows: deciding when AI should act and when people should decide.
 - Based in Greenwood, Indiana. Works remote-first or hybrid.
 - Email: schonegg.jordan@gmail.com. LinkedIn: linkedin.com/in/jordan-schonegg. Resume: available by email while it is being updated.
 
 ## Experience (from resume)
-### Moder — Senior Product Designer
-Client engagements: Xpanse, Mortgage Connect, Freedom Mortgage. (Dates aren't listed on the current resume; suggest emailing for them.)
+### Moder — Senior Product Designer, November 2022 – present
+Client engagements: Xpanse, Mortgage Connect, Freedom Mortgage.
 - Designed an AI-powered loan review platform that reduced review time by 63%, defining human-in-the-loop workflows for underwriting and processing teams.
 - Shipped a Rules Encyclopedia to production through AI-assisted design and development using Claude Code, Vercel, and GitHub.
 - Led design for a multi-tenant platform at Xpanse, aligning product, engineering, and operations on shared workflows and tenant configuration.
@@ -24,7 +24,11 @@ Client engagements: Xpanse, Mortgage Connect, Freedom Mortgage. (Dates aren't li
 - Launched Friday Show and Tell sessions to make design work visible across product and engineering.
 - Also designed and prototyped (in code) a loan origination system (LOS) framework: role-based homes for loan officers, processors and underwriters, a pipeline, a loan file with documents/income/W-2 tools, an AI assistant, a form builder (FormOS) with a forms library, a consumer portal and an admin console.
 
-### Science Teacher (AP Biology, Life Sciences) — K-12 Schools, 10 years
+### JS Consulting — Freelance UX Consultant, 2020 – 2022
+- Designed end-to-end web and mobile products for fintech and small-business clients while finishing my time in the classroom, covering research, journey mapping, wireframes, and Figma handoff.
+- Audited and restructured client workflows to cut manual effort and bring consistency across engagements, the bridge from teaching into full-time product design.
+
+### Science Teacher (AP Biology, Life Sciences) — K-12 Schools, 2012 – 2022
 - Designed curriculum and assessments for diverse learners, adapting content to different experience levels.
 - Translated complex scientific concepts into clear, engaging learning experiences — the same skill now applied to complex enterprise and AI workflows.
 
