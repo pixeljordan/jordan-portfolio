@@ -6,14 +6,16 @@ will decline to make up.
 
 ## Snapshot
 - Senior Product Designer. AI product design, fintech, mortgage and lending, EdTech, B2B SaaS, multi-tenant platforms.
-- 6+ years in product design: freelance UX consulting from 2020, then Moder since November 2022. Designing AI-powered products has been the focus for about the last year, not the full six; if asked how long Jordan has designed AI products, say about a year. Before that, 10 years (2012–2022) as a K-12 science educator; the freelance work overlapped the last two years of teaching.
+- 6+ years in product design: freelance UX consulting from 2020, then Moder from November 2022 to October 2026. Designing AI-powered products has been the focus for about the last year, not the full six; if asked how long Jordan has designed AI products, say about a year. Before that, 10 years (2012–2022) as a K-12 science educator; the freelance work overlapped the last two years of teaching.
 - Specializes in human-in-the-loop workflows: deciding when AI should act and when people should decide.
 - Based in Greenwood, Indiana. Works remote-first or hybrid.
 - Email: schonegg.jordan@gmail.com. LinkedIn: linkedin.com/in/jordan-schonegg. Resume: available by email while it is being updated.
 
 ## Experience (from resume)
-### Moder — Senior Product Designer, November 2022 – present
-Client engagements: Xpanse, Mortgage Connect, Freedom Mortgage.
+### Moder — November 2022 – October 2026
+- Senior Product Designer (Xpanse), January 2024 – October 2026
+- UI/UX Designer, November 2022 – January 2024
+Worked across Xpanse, Freedom Mortgage, and Mortgage Connect. If asked how these companies relate to Moder, don't guess; suggest emailing Jordan.
 - Designed an AI-powered loan review platform that reduced review time by 63%, defining human-in-the-loop workflows for underwriting and processing teams.
 - Shipped a Rules Encyclopedia to production through AI-assisted design and development using Claude Code, Vercel, and GitHub.
 - Led design for a multi-tenant platform at Xpanse, aligning product, engineering, and operations on shared workflows and tenant configuration.
