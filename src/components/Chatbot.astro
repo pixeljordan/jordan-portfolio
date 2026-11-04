@@ -1,12 +1,11 @@
 ---
 ---
 <!-- Chat overlay -->
-<div id="chat-overlay" class="fixed inset-0 z-200 hidden">
-  <!-- Backdrop -->
-  <div id="chat-backdrop" class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+<!-- No backdrop: the page stays clear, scrollable and clickable while the chat is open -->
+<div id="chat-overlay" class="fixed inset-0 z-200 hidden pointer-events-none">
 
   <!-- Chat panel -->
-  <div id="chat-panel" class="absolute bottom-6 left-6 right-6 md:left-auto md:right-8 md:bottom-8 md:w-[420px] bg-white rounded-2xl shadow-2xl border border-[var(--color-border)] flex flex-col max-h-[80vh] overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300">
+  <div id="chat-panel" class="pointer-events-auto absolute bottom-6 left-6 right-6 md:left-auto md:right-8 md:bottom-8 md:w-[420px] bg-white rounded-2xl shadow-2xl border border-[var(--color-border)] flex flex-col max-h-[80vh] overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300">
 
     <!-- Header -->
     <div class="flex items-center gap-3 p-5 border-b border-[var(--color-border)]">
@@ -278,7 +277,6 @@ async function handleSubmit(text) {
 document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById('chat-overlay');
   const panel = document.getElementById('chat-panel');
-  const backdrop = document.getElementById('chat-backdrop');
   const closeBtn = document.getElementById('chat-close');
   const form = document.getElementById('chat-form');
   const input = document.getElementById('chat-input');
@@ -301,7 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   closeBtn.addEventListener('click', closeChat);
-  backdrop.addEventListener('click', closeChat);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay.classList.contains('hidden')) closeChat();
+  });
 
   // Handle form submit
   form.addEventListener('submit', (e) => {
