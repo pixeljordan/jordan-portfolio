@@ -6,7 +6,7 @@ will decline to make up.
 
 ## Snapshot
 - Senior Product Designer. AI product design, fintech, mortgage and lending, EdTech, B2B SaaS, multi-tenant platforms.
-- 6+ years in product design: freelance UX consulting from 2020, then Moder since November 2022. Before that, 10 years (2012–2022) as a K-12 science educator; the freelance work overlapped the last two years of teaching.
+- 6+ years in product design: freelance UX consulting from 2020, then Moder since November 2022. Designing AI-powered products has been the focus for about the last year, not the full six; if asked how long Jordan has designed AI products, say about a year. Before that, 10 years (2012–2022) as a K-12 science educator; the freelance work overlapped the last two years of teaching.
 - Specializes in human-in-the-loop workflows: deciding when AI should act and when people should decide.
 - Based in Greenwood, Indiana. Works remote-first or hybrid.
 - Email: schonegg.jordan@gmail.com. LinkedIn: linkedin.com/in/jordan-schonegg. Resume: available by email while it is being updated.
